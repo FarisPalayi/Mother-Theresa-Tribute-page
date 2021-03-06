@@ -1,0 +1,42 @@
+@keyframes from-top {
+  0% {
+    opacity: 0;
+    transform: translate(0%, -100%);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%);
+  }
+  80% {
+    transform: translate(-2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hover {
+  100% {
+    transform: scale(1.04);
+  }
+}

@@ -1,0 +1,251 @@
+.textAnim {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.textAnim:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@-webkit-keyframes from-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0%, -100%);
+            transform: translate(0%, -100%);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes from-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0%, -100%);
+            transform: translate(0%, -100%);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@-webkit-keyframes from-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+  80% {
+    -webkit-transform: translate(-2%);
+            transform: translate(-2%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+}
+
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+  80% {
+    -webkit-transform: translate(-2%);
+            transform: translate(-2%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hover {
+  100% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+}
+
+@keyframes hover {
+  100% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+}
+
+#main {
+  border-radius: 5px;
+  background-color: #daefff;
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  margin: 1.5em 0;
+  margin-bottom: -15px;
+  min-height: 200vh;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#title,
+.subtitle,
+h3 {
+  text-align: center;
+}
+
+.section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.section1 .right {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 1.2em 0;
+}
+
+.section1 .right #title {
+  font-size: 5.25vw;
+  margin: 0;
+  color: #66fcf1;
+  color: #0aadf0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  opacity: 0;
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  -webkit-animation: from-right 2600ms ease-out 1000ms forwards;
+          animation: from-right 2600ms ease-out 1000ms forwards;
+}
+
+.section1 .right #title:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.section1 .right .subtitle {
+  color: #4abeb9;
+  color: #f8b819;
+  margin: 1.5em 0;
+  padding: 16px 0;
+  font-size: 1.8vw;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  opacity: 0;
+  -webkit-transform: translate(0%, -100%);
+          transform: translate(0%, -100%);
+  -webkit-animation: from-top 3000ms ease-out 4600ms forwards;
+          animation: from-top 3000ms ease-out 4600ms forwards;
+}
+
+.section1 .right .quotes {
+  text-align: center;
+  font-size: 2vw;
+  font-style: italic;
+  color: #a9eb67;
+  opacity: 0;
+  -webkit-animation: opacity 1500ms ease-out 7800ms forwards;
+          animation: opacity 1500ms ease-out 7800ms forwards;
+}
+
+.section1 .right .quotes cite {
+  float: right;
+  font-size: 0.9em;
+  margin-top: 0.8em;
+}
+
+.section1 .left {
+  width: 45%;
+}
+
+.section2 {
+  height: 100vh;
+}
+
+#img-div {
+  margin: 0;
+  margin-left: -3.5vw;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: opacity 3000ms forwards 11000ms;
+          animation: opacity 3000ms forwards 11000ms;
+}
+
+#img-div img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+#img-div #img-caption {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: left;
+  font-size: 0.5rem;
+  opacity: 0.7;
+  padding-left: 0.8em;
+}
+
+.source {
+  height: 15px;
+  color: #45a29e;
+  margin-left: 3.5vw;
+}
+/*# sourceMappingURL=style.css.map */
