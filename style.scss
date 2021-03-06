@@ -1,6 +1,6 @@
-@import "helperClasses";
-@import "variables";
-@import "keyframes";
+@import "Sass/helperClasses";
+@import "Sass/variables";
+@import "Sass/keyframes";
 
 #main {
   border-radius: 5px;
@@ -118,4 +118,4 @@ h3 {
   margin-left: 3.5vw;
 }
 
-@import "responsive";
+@import "Sass/responsive";
