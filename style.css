@@ -11,8 +11,8 @@
 @-webkit-keyframes from-top {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0%, -100%);
-            transform: translate(0%, -100%);
+    -webkit-transform: translate(0%, -60%);
+            transform: translate(0%, -60%);
   }
   40% {
     opacity: 1;
@@ -27,8 +27,8 @@
 @keyframes from-top {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0%, -100%);
-            transform: translate(0%, -100%);
+    -webkit-transform: translate(0%, -60%);
+            transform: translate(0%, -60%);
   }
   40% {
     opacity: 1;
@@ -114,6 +114,16 @@
   margin: 1.5em 0;
   margin-bottom: -15px;
   min-height: 200vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 ::-moz-selection {
@@ -157,6 +167,9 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 0 1.2em 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .section1 .right #title {
@@ -170,8 +183,8 @@ h3 {
   opacity: 0;
   -webkit-transform: translate(0%, -100%);
           transform: translate(0%, -100%);
-  -webkit-animation: from-right 2600ms ease-out 1000ms forwards;
-          animation: from-right 2600ms ease-out 1000ms forwards;
+  -webkit-animation: from-top 1000ms ease-out 1000ms forwards;
+          animation: from-top 1000ms ease-out 1000ms forwards;
 }
 
 .section1 .right #title:hover {
@@ -189,8 +202,8 @@ h3 {
   opacity: 0;
   -webkit-transform: translate(0%, -100%);
           transform: translate(0%, -100%);
-  -webkit-animation: from-top 3000ms ease-out 4600ms forwards;
-          animation: from-top 3000ms ease-out 4600ms forwards;
+  -webkit-animation: from-top 1000ms ease-out 2000ms forwards;
+          animation: from-top 1000ms ease-out 2000ms forwards;
 }
 
 .section1 .right .quotes {
@@ -199,8 +212,8 @@ h3 {
   font-style: italic;
   color: #a9eb67;
   opacity: 0;
-  -webkit-animation: opacity 1500ms ease-out 7800ms forwards;
-          animation: opacity 1500ms ease-out 7800ms forwards;
+  -webkit-animation: opacity 1500ms ease-out 3500ms forwards;
+          animation: opacity 1500ms ease-out 3500ms forwards;
 }
 
 .section1 .right .quotes cite {
@@ -219,11 +232,10 @@ h3 {
 
 #img-div {
   margin: 0;
-  margin-left: -3.5vw;
   left: 0;
   opacity: 0;
-  -webkit-animation: opacity 3000ms forwards 11000ms;
-          animation: opacity 3000ms forwards 11000ms;
+  -webkit-animation: opacity 3000ms forwards 5000ms;
+          animation: opacity 3000ms forwards 5000ms;
 }
 
 #img-div img {
@@ -237,10 +249,9 @@ h3 {
 
 #img-div #img-caption {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: left;
-  font-size: 0.5rem;
-  opacity: 0.7;
-  padding-left: 0.8em;
+  font-size: 0.6rem;
+  opacity: 0.45;
+  margin-left: 0.6vw;
 }
 
 .source {
