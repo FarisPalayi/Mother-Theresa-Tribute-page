@@ -8,3 +8,12 @@
 // }
 // }
 //}
+@media screen and (max-width: 680px) {
+  #main {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .section1 {
+    height: auto;
+  }
+}

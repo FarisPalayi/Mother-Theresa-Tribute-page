@@ -1,7 +1,11 @@
 @import "Sass/helperClasses";
 @import "Sass/variables";
+@import "Sass/mixins";
 @import "Sass/keyframes";
 
+* {
+  box-sizing: border-box;
+}
 #main {
   border-radius: 5px;
   background-color: #daefff;
@@ -10,13 +14,15 @@
   margin: 1.5em 0;
   margin-bottom: -15px;
   min-height: 200vh;
+  font-size: 19.5px;
+  font-family: sans-serif;
 
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 ::selection {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 #title,
 .subtitle,
@@ -37,6 +43,9 @@ h3 {
     flex-direction: column;
     margin: 0 0 1.2em 0;
     flex-grow: 1;
+    transform: translate(-15%);
+    z-index: 2;
+
     #title {
       font-size: 5.25vw;
       margin: 0;
@@ -69,6 +78,7 @@ h3 {
       font-size: 2vw;
       font-style: italic;
       color: #a9eb67;
+      font-family: serif;
 
       cite {
         float: right;
@@ -80,42 +90,127 @@ h3 {
       animation: opacity 1500ms ease-out 3500ms forwards;
     }
   }
-  .left {
+
+  .left#img-div {
     width: 45%;
+    margin: 0;
+    // margin-left: -3.5vw;
+    left: 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      max-height: 100vh;
+      overflow: hidden;
+    }
+    #img-caption {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 0.6rem;
+      opacity: 0.45;
+      margin-left: 0.6vw;
+    }
+    opacity: 0;
+    animation: opacity 3000ms forwards 5000ms;
   }
 }
 
 .section2 {
-  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5em;
+  color: $orange;
+  color: $silver;
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    color: $cyan;
+  }
+  p {
+    line-height: 1.5em;
+  }
+  .quick-facts {
+    padding: 1em;
+    @include flexBox(column, flex-start, center);
+    min-width: 300px;
+    width: 40%;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        display: grid;
+        grid-template-columns: 6fr 1fr 9fr;
+      }
+    }
+  }
+  .details {
+    padding: 1em;
+    @include flexBox(column, flex-start, center);
+    min-width: 300px;
+    width: 60%;
+    ul {
+      color: $green;
+      color: $silver;
+    }
+  }
 }
 
-#img-div {
-  margin: 0;
-  // margin-left: -3.5vw;
-  left: 0;
-
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    max-height: 100vh;
-    overflow: hidden;
-  }
-  #img-caption {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-    font-size: 0.6rem;
-    opacity: 0.45;
-    margin-left: 0.6vw;
-  }
-  opacity: 0;
-  animation: opacity 3000ms forwards 5000ms;
-}
 .source {
-  height: 15px;
-  color: $darkCyan;
-  margin-left: 3.5vw;
+  text-align: center;
+  width: 100%;
 }
 
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+.section3 {
+  width: 100%;
+
+  @include flexBox(column, flex-start, center);
+  .events-title {
+    width: 100%;
+    color: $cyan;
+    align-self: start;
+  }
+
+  .flowchart {
+    padding: 3em 1em;
+    width: 100%;
+    //min-width: 700px;
+    max-width: 950px;
+    @include flexBox(column, flex-start, flex-start);
+
+    .to-right {
+      align-self: flex-end;
+      transform: translate(-60px, 16px);
+    }
+    .to-left {
+      transform: translate(60px, 16px);
+    }
+    .recta-container {
+      width: 220px;
+
+      .rectangle {
+        width: 180px;
+        height: 160px;
+        background-color: transparent;
+        border: 4px solid $silver;
+        transform: rotate(-32deg) skew(25deg);
+        overflow: hidden;
+        padding: 5px;
+
+        img {
+          width: 100%;
+          transform: rotate(45deg);
+          height: 100%;
+        }
+      }
+    }
+  }
+}
 @import "Sass/responsive";
