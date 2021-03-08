@@ -10,6 +10,7 @@
   margin: 1.5em 0;
   margin-bottom: -15px;
   min-height: 200vh;
+  font-size: 1.5em;
 
   display: flex;
   flex-direction: column;
@@ -87,6 +88,17 @@ h3 {
 
 .section2 {
   height: 100vh;
+  padding: 3em;
+  .intro-title {
+    text-decoration: none;
+  }
+  .introduction {
+    font-size: 1em;
+    font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.5em;
+    text-indent: 2em;
+  }
 }
 
 #img-div {
@@ -114,8 +126,28 @@ h3 {
 }
 .source {
   height: 15px;
-  color: $darkCyan;
-  margin-left: 3.5vw;
+  color: $darkerCyan;
+  text-align: center;
 }
 
+h2 {
+  font-size: 2em;
+  margin-top: 2em;
+  color: $darkCyan;
+}
+p {
+  //color: $green;
+}
+strong {
+  color: $darkCyan;
+}
+ul {
+  list-style-type: none;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+li {
+  display: flex;
+  //color: $green;
+}
 @import "Sass/responsive";

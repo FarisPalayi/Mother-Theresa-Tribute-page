@@ -110,10 +110,11 @@
   border-radius: 5px;
   background-color: #daefff;
   background-color: #0b0c10;
-  color: #c5c6c7;
+  color: #d4d4d4;
   margin: 1.5em 0;
   margin-bottom: -15px;
   min-height: 200vh;
+  font-size: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,6 +229,18 @@ h3 {
 
 .section2 {
   height: 100vh;
+  padding: 3em;
+}
+
+.section2 .intro-title {
+  text-decoration: none;
+}
+
+.section2 .introduction {
+  font-size: 1em;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5em;
+  text-indent: 2em;
 }
 
 #img-div {
@@ -257,6 +270,27 @@ h3 {
 .source {
   height: 15px;
   color: #45a29e;
-  margin-left: 3.5vw;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 2em;
+  color: #0aadf0;
+}
+
+strong {
+  color: #0aadf0;
+}
+
+ul {
+  list-style-type: none;
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
