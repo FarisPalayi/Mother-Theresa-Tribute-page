@@ -3,7 +3,9 @@
 @import "Sass/mixins";
 @import "Sass/keyframes";
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 #main {
@@ -119,6 +121,7 @@ h3 {
 
 .section2 {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 1.5em;
   color: $orange;
@@ -150,7 +153,7 @@ h3 {
   .details {
     padding: 1em;
     @include flexBox(column, flex-start, center);
-    min-width: 300px;
+    min-width: 250px;
     width: 60%;
     ul {
       color: $green;
@@ -170,45 +173,55 @@ p {
 }
 .section3 {
   width: 100%;
-
-  @include flexBox(column, flex-start, center);
+  padding: 1em;
   .events-title {
-    width: 100%;
     color: $cyan;
-    align-self: start;
+    margin-bottom: 60px;
   }
+  .card-container {
+    @include flexBox(row, center, start);
+    flex-wrap: wrap;
 
-  .flowchart {
-    padding: 3em 1em;
-    width: 100%;
-    //min-width: 700px;
-    max-width: 950px;
-    @include flexBox(column, flex-start, flex-start);
+    .card {
+      margin: 15px;
+      width: 275px;
+      height: 400px;
+      background-color: rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 10px 10px 10px #00000085;
 
-    .to-right {
-      align-self: flex-end;
-      transform: translate(-60px, 16px);
-    }
-    .to-left {
-      transform: translate(60px, 16px);
-    }
-    .recta-container {
-      width: 220px;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 7fr 3fr;
 
-      .rectangle {
-        width: 180px;
-        height: 160px;
-        background-color: transparent;
-        border: 4px solid $silver;
-        transform: rotate(-32deg) skew(25deg);
-        overflow: hidden;
-        padding: 5px;
+      transition: all .2s;
 
-        img {
-          width: 100%;
-          transform: rotate(45deg);
-          height: 100%;
+      .card-top {
+        width: 100%;
+        overflow: auto;
+
+        img{
+          max-width: 100%;
+          height: auto;
+          aspect-ratio:1/1;
         }
+      }
+      .card-bottom {
+        border-top: 1px solid rgb(44, 44, 44);
+        width: 100%;
+        padding: 15px;
+
+        .year{
+          margin: 10px 0 0 0;
+        }
+        .event-details{
+          font-size: 16.575px;
+        }
+      }
+
+      &:hover{
+        box-shadow: 20px 20px 20px #000000;
       }
     }
   }

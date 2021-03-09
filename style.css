@@ -106,7 +106,9 @@
   }
 }
 
-* {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -262,6 +264,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 1.5em;
@@ -324,7 +329,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 300px;
+  min-width: 250px;
   width: 60%;
 }
 
@@ -345,80 +350,79 @@ p {
 
 .section3 {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 1em;
 }
 
 .section3 .events-title {
-  width: 100%;
   color: #0aadf0;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  margin-bottom: 60px;
 }
 
-.section3 .flowchart {
-  padding: 3em 1em;
-  width: 100%;
-  max-width: 950px;
+.section3 .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.section3 .flowchart .to-right {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-transform: translate(-60px, 16px);
-          transform: translate(-60px, 16px);
-}
-
-.section3 .flowchart .to-left {
-  -webkit-transform: translate(60px, 16px);
-          transform: translate(60px, 16px);
-}
-
-.section3 .flowchart .recta-container {
-  width: 220px;
-}
-
-.section3 .flowchart .recta-container .rectangle {
-  width: 180px;
-  height: 160px;
-  background-color: transparent;
-  border: 4px solid #d8d8d8;
-  -webkit-transform: rotate(-32deg) skew(25deg);
-          transform: rotate(-32deg) skew(25deg);
+.section3 .card-container .card {
+  margin: 15px;
+  width: 275px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 10px #00000085;
+          box-shadow: 10px 10px 10px #00000085;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 7fr 3fr;
+      grid-template-rows: 7fr 3fr;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
-.section3 .flowchart .recta-container .rectangle img {
+.section3 .card-container .card .card-top {
   width: 100%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  height: 100%;
+  overflow: auto;
+}
+
+.section3 .card-container .card .card-top img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.section3 .card-container .card .card-bottom {
+  border-top: 1px solid #2c2c2c;
+  width: 100%;
+  padding: 15px;
+}
+
+.section3 .card-container .card .card-bottom .year {
+  margin: 10px 0 0 0;
+}
+
+.section3 .card-container .card .card-bottom .event-details {
+  font-size: 16.575px;
+}
+
+.section3 .card-container .card:hover {
+  -webkit-box-shadow: 20px 20px 20px #000000;
+          box-shadow: 20px 20px 20px #000000;
 }
 
 @media screen and (max-width: 680px) {
