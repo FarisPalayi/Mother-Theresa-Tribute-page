@@ -17,3 +17,9 @@
     height: auto;
   }
 }
+
+@media screen and (max-width: 920px) {
+  .section1 .scroll {
+    visibility: hidden;
+  }
+}

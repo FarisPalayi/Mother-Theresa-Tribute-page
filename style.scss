@@ -7,6 +7,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 #main {
   border-radius: 5px;
@@ -33,6 +34,7 @@ h3 {
 }
 
 .section1 {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -40,6 +42,7 @@ h3 {
   height: 100vh;
 
   .right {
+    position: relative;
     width: 55%;
     display: flex;
     flex-direction: column;
@@ -118,15 +121,79 @@ h3 {
     opacity: 0;
     animation: opacity 3000ms forwards 5000ms;
   }
+
+  .scroll {
+    position: absolute;
+    text-decoration: none;
+    font-size: 4rem;
+    transform-origin: center;
+    transform: translate(0%, 30%) rotate(90deg);
+    transition: all 0.2s;
+
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    //line-height: 50px;
+    bottom: 20px;
+    overflow: hidden;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   //background-color: #f00;
+    //   width: 70px;
+    //   height: 70px;
+    //   border-radius: 50%;
+    //   transition: all 0.2s;
+    //   transform: scale(0.75);
+    //   border: 1px solid gray;
+    //   opacity: 0;
+    // }
+    // &:hover::before {
+    //   transform: scale(1);
+    //   opacity: 1;
+    //   border: .8px solid $darkCyan;
+    // }
+
+    &:hover {
+      transform: translate(0%, 30%) rotate(90deg) scale(1.08);
+    }
+
+    &:hover svg #path10{
+      fill:$cyan !important;
+    }
+
+    svg {
+      position: relative;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      top: 50%;
+      left: calc(50% + 5px);
+      
+      //height: 50px;
+      // width: 50px;
+      //bottom: 10px;
+    }
+
+    &:focus{
+      animation:none;
+    }
+
+    opacity: 0;
+    animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
+  }
 }
 
 .section2 {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin: 1.5em;
   color: $orange;
   color: $silver;
+  min-height: 95vh;
+  height: auto;
 
   h3 {
     font-family: "Roboto", sans-serif;
@@ -181,6 +248,18 @@ p {
     text-align: center;
     color: $cyan;
     margin-bottom: 60px;
+    transition: all 0.2s;
+
+    color: transparent;
+    background: linear-gradient($cyan, $cyan);
+    -webkit-background-clip: text;
+
+    &:hover {
+      color: transparent;
+      background: linear-gradient($cyan, rgb(216, 216, 216));
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
   }
   .card-container {
     @include flexBox(row, center, start);
@@ -194,6 +273,7 @@ p {
       overflow: hidden;
       border-radius: 5px;
       box-shadow: 10px 10px 10px #00000085;
+      //box-shadow: rgba(0, 0, 0, 0.8) 2px 20px 30px -15px;
 
       display: grid;
       grid-template-columns: 100%;
@@ -226,7 +306,9 @@ p {
 
       &:hover {
         box-shadow: 20px 20px 20px #000000;
-        transform: scale(1.005)
+        // box-shadow: rgba(0, 0, 0, 0.8) 3px 30px 40px -25px;
+
+        transform: scale(1.005);
       }
     }
   }
