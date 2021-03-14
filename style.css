@@ -341,6 +341,7 @@ h3 {
 }
 
 .section1 .scroll:focus {
+  visibility: hidden;
   -webkit-animation: none;
           animation: none;
 }

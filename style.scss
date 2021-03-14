@@ -175,6 +175,7 @@ h3 {
     }
 
     &:focus{
+      visibility: hidden;
       animation:none;
     }
 
