@@ -7,6 +7,6 @@ https://farispalayi.github.io/Mother-Theresa-Tribute-page/ <br>
 https://codepen.io/farispalayi/embed/eYBjXvy?default-tab=&theme-id= <br>
 (this page is still work in progress)
 
-  Builded using:
+  ### Builded using:
   - HTML
   - CSS (Sass)
