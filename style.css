@@ -1,3 +1,4 @@
+/*rgb(42, 154, 132)*/
 @-webkit-keyframes from-top {
   0% {
     opacity: 0;
@@ -13,7 +14,6 @@
             transform: translate(0%, 0%);
   }
 }
-
 @keyframes from-top {
   0% {
     opacity: 0;
@@ -534,6 +534,53 @@ p {
           box-shadow: 20px 20px 20px #000000;
   -webkit-transform: scale(1.005);
           transform: scale(1.005);
+}
+
+.social-media-icons-container button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.social-media-icons-container button .sm-bg {
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff00;
+  border-radius: 50%;
+}
+
+.social-media-icons-container svg {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+
+.social-media-icons-container .facebook-icon-container button:active svg,
+.social-media-icons-container .facebook-icon-container button:hover svg {
+  color: #3b5998;
+}
+
+.social-media-icons-container .linkedin-icon-container button:active svg,
+.social-media-icons-container .linkedin-icon-container button:hover svg {
+  color: #007bb6;
+}
+
+.social-media-icons-container .twitter-icon-container button:active svg,
+.social-media-icons-container .twitter-icon-container button:hover svg {
+  color: #00aced;
+}
+
+.social-media-icons-container .gmail-icon-container button:active svg,
+.social-media-icons-container .gmail-icon-container button:hover svg {
+  color: #c51634;
+}
+
+.social-media-icons-container .whatsapp-icon-container button:active svg,
+.social-media-icons-container .whatsapp-icon-container button:hover svg {
+  color: #25d366;
 }
 
 @media screen and (max-width: 680px) {
