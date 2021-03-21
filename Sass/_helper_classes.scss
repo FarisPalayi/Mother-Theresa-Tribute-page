@@ -1,0 +1,14 @@
+.textAnim {
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.cyan-gradient {
+  color: transparent !important;
+
+  background: linear-gradient(to bottom right, $cyan , #66defc) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}

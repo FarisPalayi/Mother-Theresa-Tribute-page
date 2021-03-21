@@ -8,3 +8,18 @@
 // }
 // }
 //}
+@media screen and (max-width: 680px) {
+  #main {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .section1 {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .section1 .scroll {
+    visibility: hidden;
+  }
+}
