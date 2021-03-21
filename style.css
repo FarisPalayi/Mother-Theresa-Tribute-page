@@ -536,6 +536,44 @@ p {
           transform: scale(1.005);
 }
 
+.footer {
+  height: 70px;
+  width: 100%;
+  background-color: #040506;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: align-items;
+      -ms-flex-align: align-items;
+          align-items: align-items;
+}
+
+.social-media-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 300px;
+  padding: 5px;
+  background-color: transparent;
+}
+
 .social-media-icons-container button {
   background-color: transparent;
   border: none;
@@ -546,16 +584,29 @@ p {
 }
 
 .social-media-icons-container button .sm-bg {
-  height: 50px;
-  width: 50px;
+  height: 33px;
+  width: 33px;
   background-color: #ffffff00;
   border-radius: 50%;
 }
 
 .social-media-icons-container svg {
-  height: 50px;
-  width: 50px;
+  height: 33px;
+  width: 33px;
   overflow: hidden;
+}
+
+.social-media-icons-container a,
+.social-media-icons-container a:link,
+.social-media-icons-container a:visited,
+.social-media-icons-container a:hover,
+.social-media-icons-container a:active {
+  color: #d8d8d8;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .social-media-icons-container .facebook-icon-container button:active svg,

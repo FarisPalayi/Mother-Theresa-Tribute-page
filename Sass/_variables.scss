@@ -6,9 +6,15 @@ $dark: #1f2833;
 $silver: #d8d8d8;
 $green: #a9eb67;
 $orange: #f8b819;
+
+$footer-bg: hsl(228, 19%, 2%);
+
 //social media logo colors
 $facebookLogoColor: rgb(59, 89, 152);
 $linkedinLogoColor: rgb(0, 123, 182);
 $twitterLogoColor: rgb(0, 172, 237);
 $gmailLogoColor: rgb(197, 22, 52);
-$whatsappLogoColor: #25d366 /*rgb(42, 154, 132)*/;
+$whatsappLogoColor: rgb(37, 211, 102) /*rgb(42, 154, 132)*/;
+//icons height and width
+$sm-icon-height: 33px;
+$sm-icon-width: $sm-icon-height;

@@ -314,10 +314,22 @@ p {
     }
   }
 }
+.footer {
+  height: 70px;
+  width: 100%;
+  background-color: $footer-bg;
+
+  @include flexBox(row, center, align-items);
+}
 //SOCIAL MEDIA ICONS
 .social-media-icons-container {
-  $sm-icon-height: 50px;
-  $sm-icon-width: 50px;
+  @include flexBox(row, space-evenly, center);
+
+  //height: 70px;
+  min-width: 300px;
+  padding: 5px;
+  background-color: transparent;
+
   button {
     background-color: transparent;
     border: none;
@@ -325,6 +337,7 @@ p {
     font: inherit;
     color: inherit;
     cursor: pointer;
+    //overflow: hidden;
 
     .sm-bg {
       //sociall media icons' background
@@ -338,6 +351,18 @@ p {
     height: $sm-icon-height;
     width: $sm-icon-width;
     overflow: hidden;
+  }
+  a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: #d8d8d8;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background-color: transparent;
   }
   .facebook-icon-container button:active svg,
   .facebook-icon-container button:hover svg {
