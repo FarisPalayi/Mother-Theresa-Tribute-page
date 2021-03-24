@@ -629,9 +629,9 @@ p {
   color: #c51634;
 }
 
-.social-media-icons-container .whatsapp-icon-container button:active svg,
-.social-media-icons-container .whatsapp-icon-container button:hover svg {
-  color: #25d366;
+.social-media-icons-container .github-icon-container button:active svg,
+.social-media-icons-container .github-icon-container button:hover svg {
+  color: white;
 }
 
 @media screen and (max-width: 680px) {

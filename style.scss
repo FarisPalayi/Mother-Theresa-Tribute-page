@@ -364,6 +364,7 @@ p {
     text-decoration: none;
     background-color: transparent;
   }
+
   .facebook-icon-container button:active svg,
   .facebook-icon-container button:hover svg {
     color: $facebookLogoColor;
@@ -384,9 +385,9 @@ p {
     color: $gmailLogoColor;
   }
 
-  .whatsapp-icon-container button:active svg,
-  .whatsapp-icon-container button:hover svg {
-    color: $whatsappLogoColor;
+  .github-icon-container button:active svg,
+  .github-icon-container button:hover svg {
+    color: white;
   }
 }
 @import "Sass/responsive";
