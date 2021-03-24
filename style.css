@@ -670,6 +670,11 @@ p {
   color: white;
 }
 
+.social-media-icons-container .codepen-icon-container button:active svg,
+.social-media-icons-container .codepen-icon-container button:hover svg {
+  color: #5bb7f5;
+}
+
 .footer-text-box {
   width: 50%;
   height: 60px;
