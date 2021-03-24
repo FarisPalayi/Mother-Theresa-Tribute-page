@@ -676,6 +676,14 @@ p {
   white-space: nowrap;
 }
 
+.footer-text-box .follow-text {
+  font-weight: 300;
+}
+
+.footer-text-box .hashtag {
+  font-weight: 600;
+}
+
 .to-top-arrow-container {
   width: 25%;
   height: 60px;
@@ -700,6 +708,8 @@ p {
   height: 40px;
   text-align: center;
   border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px 0 #3f3f3f;
+          box-shadow: 0px 0px 10px 0 #3f3f3f;
 }
 
 .to-top-arrow-container .to-top-arrow-box a {
@@ -713,7 +723,8 @@ p {
 }
 
 .to-top-arrow-container .to-top-arrow-box:hover {
-  background-color: rgba(214, 214, 214, 0.562);
+  -webkit-box-shadow: 0px 0px 15px 0 #505050;
+          box-shadow: 0px 0px 15px 0 #505050;
 }
 
 @media screen and (max-width: 680px) {
