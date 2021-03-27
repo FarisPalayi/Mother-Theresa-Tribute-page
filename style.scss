@@ -1,6 +1,7 @@
 @import "Sass/variables";
 @import "Sass/mixins";
 @import "Sass/keyframes";
+@import "Sass/global";
 @import "Sass/helper_classes";
 
 *,
@@ -13,7 +14,7 @@ html,
 body {
   background-color: $black;
 }
-#main {
+body#main {
   border-radius: 5px;
   background-color: #daefff;
   background-color: $black;
@@ -42,7 +43,7 @@ h3 {
 .section1 {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -58,7 +59,7 @@ h3 {
     z-index: 2;
 
     #title {
-      font-size: 5.25vw;
+      font-size: 4.2rem; //5.25vw //4.2rem
       margin: 0;
       color: $cyan;
       color: #0aadf0;
@@ -78,7 +79,7 @@ h3 {
       color: #f8b819;
       margin: 1.5em 0;
       padding: 16px 0;
-      font-size: 1.8vw;
+      font-size: 1.4375rem; //1.8vw
       font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 
       opacity: 0;
@@ -87,7 +88,7 @@ h3 {
     }
     .quotes {
       text-align: center;
-      font-size: 2vw;
+      font-size: 1.6rem; //2vw
       font-style: italic;
       color: #a9eb67;
       font-family: serif;
@@ -103,7 +104,10 @@ h3 {
     }
   }
 
-  .left#img-div {
+  .left {
+    width: 45%;
+  }
+  #img-div {
     width: 45%;
     margin: 0;
     // margin-left: -3.5vw;
@@ -116,6 +120,9 @@ h3 {
       margin: 0 auto;
       max-height: 100vh;
       overflow: hidden;
+      //styles for Alt text
+      font-size: 0.8rem;
+      color: rgb(156, 156, 156);
     }
     #img-caption {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -132,6 +139,7 @@ h3 {
     position: absolute;
     text-decoration: none;
     font-size: 4rem;
+    opacity: 0;
     transform-origin: center;
     transform: translate(0%, 30%) rotate(90deg);
     transition: all 0.2s;
@@ -185,7 +193,6 @@ h3 {
       // animation:none;
     }
 
-    opacity: 0;
     animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
   }
 }
@@ -242,13 +249,10 @@ h3 {
   width: 100%;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1em;
-}
 .section3 {
   width: 100%;
   padding: 1em;
+  height: 100vh;
 
   .events-title {
     width: 100%;
@@ -266,6 +270,30 @@ p {
       background: linear-gradient($cyan, rgb(216, 216, 216));
       background-clip: text;
       -webkit-background-clip: text;
+    }
+  }
+}
+
+.related-articles {
+  width: 100%;
+  height: auto;
+  p h3 {
+    text-align: center;
+  }
+  ul {
+    list-style-type: circle $darkCyan;
+
+    li {
+      color: #9ee1fc;
+    }
+  }
+  a {
+    color: $cyan;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
     }
   }
 }
@@ -412,8 +440,9 @@ p {
     height: 40px;
     text-align: center;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 0 rgb(63, 63, 63);
+    box-shadow: 0px 0px 10px 5px rgb(63, 63, 63);
     overflow: hidden;
+    transition: transform 0.15s ease-out, box-shadow 0.2s;
 
     a {
       display: inline-block;
@@ -426,14 +455,15 @@ p {
 
       svg {
         transform: scale(0.75);
-
-        path {
-        }
       }
     }
     &:hover {
       //background-color: rgba(214, 214, 214, 0.562);
-      box-shadow: 0px 0px 20px 0 rgb(63, 63, 63);
+      box-shadow: 0px 0px 15px 4px $cyan;
+      transform: translateY(-5px);
+      a svg {
+        fill: $cyan;
+      }
     }
   }
 }

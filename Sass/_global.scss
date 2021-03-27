@@ -1,0 +1,19 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $cyan;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.65rem;
+}
+ul {
+  li {
+    line-height: 1.75rem;
+    font-family: "Open Sans", sans-serif;
+  }
+}
