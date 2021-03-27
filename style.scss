@@ -277,23 +277,36 @@ h3 {
 .related-articles {
   width: 100%;
   height: auto;
+  padding: 1.5rem;
+  @include flexBox(column, center, center);
+
   p h3 {
     text-align: center;
   }
   ul {
-    list-style-type: circle $darkCyan;
+    list-style-type: disc;
+    padding: 0 1rem;
 
     li {
       color: #9ee1fc;
+      color: $cyan;
     }
   }
   a {
-    color: $cyan;
+    color: $silver;
     text-decoration: none;
 
-    &:hover,
+    &:hover {
+      //color: $cyan;
+      color: $silver !important;
+      border-bottom: solid $cyan;
+    }
     &:active {
-      text-decoration: underline;
+      color: $cyan;
+      border-bottom: solid $cyan;
+    }
+    &:visited {
+      color: hsl(190, 75%, 35%);
     }
   }
 }

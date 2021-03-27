@@ -499,6 +499,20 @@ h3 {
 .related-articles {
   width: 100%;
   height: auto;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .related-articles p h3 {
@@ -506,20 +520,32 @@ h3 {
 }
 
 .related-articles ul {
-  list-style-type: circle #45a29e;
+  list-style-type: disc;
+  padding: 0 1rem;
 }
 
 .related-articles ul li {
   color: #9ee1fc;
+  color: #0aadf0;
 }
 
 .related-articles a {
-  color: #0aadf0;
+  color: #d8d8d8;
   text-decoration: none;
 }
 
-.related-articles a:hover, .related-articles a:active {
-  text-decoration: underline;
+.related-articles a:hover {
+  color: #d8d8d8 !important;
+  border-bottom: solid #0aadf0;
+}
+
+.related-articles a:active {
+  color: #0aadf0;
+  border-bottom: solid #0aadf0;
+}
+
+.related-articles a:visited {
+  color: #16869c;
 }
 
 .footer {
