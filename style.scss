@@ -268,57 +268,6 @@ p {
       -webkit-background-clip: text;
     }
   }
-  .card-container {
-    @include flexBox(row, center, start);
-    flex-wrap: wrap;
-
-    .card {
-      margin: 15px;
-      width: 275px;
-      height: 400px;
-      background-color: rgba(255, 255, 255, 0.05);
-      overflow: hidden;
-      border-radius: 5px;
-      box-shadow: 10px 10px 10px #00000085;
-      //box-shadow: rgba(0, 0, 0, 0.8) 2px 20px 30px -15px;
-
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 7fr 3fr;
-
-      transition: all 0.2s;
-
-      .card-top {
-        width: 100%;
-        overflow: auto;
-
-        img {
-          max-width: 100%;
-          height: auto;
-          aspect-ratio: 1/1;
-        }
-      }
-      .card-bottom {
-        border-top: 1px solid rgb(44, 44, 44);
-        width: 100%;
-        padding: 15px;
-
-        .year {
-          margin: 10px 0 0 0;
-        }
-        .event-details {
-          font-size: 16.575px;
-        }
-      }
-
-      &:hover {
-        box-shadow: 20px 20px 20px #000000;
-        // box-shadow: rgba(0, 0, 0, 0.8) 3px 30px 40px -25px;
-
-        transform: scale(1.005);
-      }
-    }
-  }
 }
 
 .footer {
