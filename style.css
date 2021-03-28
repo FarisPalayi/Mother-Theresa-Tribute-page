@@ -464,11 +464,6 @@ h3 {
   color: #d8d8d8;
 }
 
-.source {
-  text-align: center;
-  width: 100%;
-}
-
 .section3 {
   width: 100%;
   padding: 1em;
@@ -763,7 +758,6 @@ h3 {
 @media screen and (max-width: 680px) {
   #main {
     font-size: 16px;
-    line-height: 16px;
   }
   .section1 {
     height: auto;
