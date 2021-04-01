@@ -13,6 +13,7 @@
 html,
 body {
   background-color: $black;
+  font-size: 100%;
 }
 body#main {
   border-radius: 5px;
@@ -32,7 +33,7 @@ body#main {
   align-items: start;
 }
 ::selection {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 #title,
 .subtitle,
@@ -106,9 +107,6 @@ h3 {
 
   .left {
     width: 45%;
-  }
-  #img-div {
-    width: 45%;
     margin: 0;
     // margin-left: -3.5vw;
     left: 0;
@@ -124,7 +122,7 @@ h3 {
       font-size: 0.8rem;
       color: rgb(156, 156, 156);
     }
-    #img-caption {
+    .main-image-source {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
       font-size: 0.6rem;
@@ -209,7 +207,8 @@ h3 {
   min-height: 95vh;
   height: auto;
 
-  h3 {
+  h3,
+  h2 {
     font-family: "Roboto", sans-serif;
     color: $cyan;
   }
