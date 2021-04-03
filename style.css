@@ -135,6 +135,8 @@ h4,
 h5,
 h6 {
   color: #0aadf0;
+  width: 100%;
+  text-align: center;
 }
 
 p {
@@ -148,14 +150,14 @@ ul li {
   font-family: "Open Sans", sans-serif;
 }
 
-.textAnim {
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+.onHoverBigText {
+  -webkit-transition: all 1.15s ease-in-out !important;
+  transition: all 1.15s ease-in-out !important;
 }
 
-.textAnim:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.onHoverBigText:hover {
+  -webkit-transform: scale(1.05) !important;
+          transform: scale(1.05) !important;
 }
 
 .cyan-gradient {
@@ -177,11 +179,11 @@ ul li {
 html,
 body {
   background-color: #0b0c10;
+  font-size: 100%;
 }
 
-body#main {
+body {
   border-radius: 5px;
-  background-color: #daefff;
   background-color: #0b0c10;
   color: #d8d8d8;
   margin: 1.5em 0;
@@ -204,20 +206,14 @@ body#main {
 }
 
 ::-moz-selection {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 ::selection {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
-#title,
-.subtitle,
-h3 {
-  text-align: center;
-}
-
-.section1 {
+main > section:first-of-type {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,12 +228,15 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
 }
 
-.section1 .right {
+main > section:first-of-type .right {
   position: relative;
   width: 55%;
+  min-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +253,7 @@ h3 {
   z-index: 2;
 }
 
-.section1 .right #title {
+main > section:first-of-type .right h1 {
   font-size: 4.2rem;
   margin: 0;
   color: #0aadf0;
@@ -269,16 +268,17 @@ h3 {
           animation: from-top 1000ms ease-out 1000ms forwards;
 }
 
-.section1 .right #title:hover {
+main > section:first-of-type .right h1:hover {
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
 }
 
-.section1 .right .subtitle {
+main > section:first-of-type .right .subtitle {
   color: #4abeb9;
   color: #f8b819;
   margin: 1.5em 0;
   padding: 16px 0;
+  text-align: center;
   font-size: 1.4375rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   opacity: 0;
@@ -288,7 +288,7 @@ h3 {
           animation: from-top 1000ms ease-out 2000ms forwards;
 }
 
-.section1 .right .quotes {
+main > section:first-of-type .right blockquote {
   text-align: center;
   font-size: 1.6rem;
   font-style: italic;
@@ -299,26 +299,16 @@ h3 {
           animation: opacity 1500ms ease-out 3500ms forwards;
 }
 
-.section1 .right .quotes cite {
-  float: right;
-  font-size: 0.9em;
-  margin-top: 0.8em;
-}
-
-.section1 .left {
+main > section:first-of-type .left {
   width: 45%;
-}
-
-.section1 #img-div {
-  width: 45%;
+  min-width: 320px;
   margin: 0;
-  left: 0;
   opacity: 0;
   -webkit-animation: opacity 3000ms forwards 5000ms;
           animation: opacity 3000ms forwards 5000ms;
 }
 
-.section1 #img-div img {
+main > section:first-of-type .left img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -329,14 +319,14 @@ h3 {
   color: #9c9c9c;
 }
 
-.section1 #img-div #img-caption {
+main > section:first-of-type .left .main-image-source {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 0.6rem;
   opacity: 0.45;
   margin-left: 0.6vw;
 }
 
-.section1 .scroll {
+main > section:first-of-type .scroll-arrow {
   position: absolute;
   text-decoration: none;
   font-size: 4rem;
@@ -356,16 +346,16 @@ h3 {
           animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
 }
 
-.section1 .scroll:hover {
+main > section:first-of-type .scroll-arrow:hover {
   -webkit-transform: translate(0%, 30%) rotate(90deg) scale(1.08);
           transform: translate(0%, 30%) rotate(90deg) scale(1.08);
 }
 
-.section1 .scroll:hover svg #path10 {
+main > section:first-of-type .scroll-arrow:hover svg #path10 {
   fill: #0aadf0 !important;
 }
 
-.section1 .scroll svg {
+main > section:first-of-type .scroll-arrow svg {
   position: relative;
   -webkit-transform: translate(-50%, -50%) rotate(-90deg);
           transform: translate(-50%, -50%) rotate(-90deg);
@@ -373,11 +363,11 @@ h3 {
   left: calc(50% + 5px);
 }
 
-.section1 .scroll:focus {
+main > section:first-of-type .scroll-arrow:focus {
   visibility: hidden;
 }
 
-.section2 {
+main > section:nth-of-type(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,22 +384,12 @@ h3 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 1.5em;
-  color: #f8b819;
   color: #d8d8d8;
   min-height: 95vh;
   height: auto;
 }
 
-.section2 h3 {
-  font-family: "Roboto", sans-serif;
-  color: #0aadf0;
-}
-
-.section2 p {
-  line-height: 1.5em;
-}
-
-.section2 .quick-facts {
+main > section:nth-of-type(2) > aside {
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,19 +408,23 @@ h3 {
   width: 40%;
 }
 
-.section2 .quick-facts ul {
+main > section:nth-of-type(2) > aside h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+main > section:nth-of-type(2) > aside ul {
   list-style-type: none;
   padding: 0;
 }
 
-.section2 .quick-facts ul li {
+main > section:nth-of-type(2) > aside ul li {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 6fr 1fr 9fr;
       grid-template-columns: 6fr 1fr 9fr;
 }
 
-.section2 .details {
+main > section:nth-of-type(2) > div {
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,39 +443,48 @@ h3 {
   width: 60%;
 }
 
-.section2 .details ul {
+main > section:nth-of-type(2) > div h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+main > section:nth-of-type(2) > div p {
+  line-height: 1.5em;
+}
+
+main > section:nth-of-type(2) > div ul {
   color: #a9eb67;
   color: #d8d8d8;
 }
 
-.section3 {
+main > section:nth-of-type(3) {
   width: 100%;
   padding: 1em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.section3 .events-title {
+main > section:nth-of-type(3) > h2 {
   width: 100%;
   text-align: center;
   color: #0aadf0;
   margin-bottom: 60px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   color: transparent;
   background: -webkit-gradient(linear, left top, left bottom, from(#0aadf0), to(#0aadf0));
   background: linear-gradient(#0aadf0, #0aadf0);
-  -webkit-background-clip: text;
-}
-
-.section3 .events-title:hover {
-  color: transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0aadf0), to(#d8d8d8));
-  background: linear-gradient(#0aadf0, #d8d8d8);
   background-clip: text;
   -webkit-background-clip: text;
 }
 
-.related-articles {
+main > section:nth-of-type(3) > h2:hover {
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0aadf0), to(#d4d4d4));
+  background: linear-gradient(#0aadf0, #d4d4d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+main > aside {
   width: 100%;
   height: auto;
   padding: 1.5rem;
@@ -510,40 +503,36 @@ h3 {
           align-items: center;
 }
 
-.related-articles p h3 {
-  text-align: center;
-}
-
-.related-articles ul {
+main > aside ul {
   list-style-type: disc;
   padding: 0 1rem;
 }
 
-.related-articles ul li {
+main > aside ul li {
   color: #9ee1fc;
   color: #0aadf0;
 }
 
-.related-articles a {
+main > aside ul li a {
   color: #d8d8d8;
   text-decoration: none;
 }
 
-.related-articles a:hover {
+main > aside ul li a:hover {
   color: #d8d8d8 !important;
   border-bottom: solid #0aadf0;
 }
 
-.related-articles a:active {
+main > aside ul li a:active {
   color: #0aadf0;
   border-bottom: solid #0aadf0;
 }
 
-.related-articles a:visited {
+main > aside ul li a:visited {
   color: #16869c;
 }
 
-.footer {
+footer {
   position: relative;
   bottom: 0;
   min-height: 70px;
@@ -566,7 +555,7 @@ h3 {
       flex-wrap: wrap;
 }
 
-.footer::before {
+footer::before {
   content: "";
   position: absolute;
   width: 101%;
@@ -579,7 +568,7 @@ h3 {
           transform: rotate(-1deg);
 }
 
-.footer::after {
+footer::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -593,7 +582,7 @@ h3 {
           transform: rotate(0deg);
 }
 
-.social-media-icons-container {
+footer > aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,7 +604,7 @@ h3 {
   color: #d8d8d8;
 }
 
-.social-media-icons-container button {
+footer > aside button {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -624,24 +613,17 @@ h3 {
   cursor: pointer;
 }
 
-.social-media-icons-container button .sm-bg {
-  height: 29px;
-  width: 29px;
-  background-color: #ffffff00;
-  border-radius: 50%;
-}
-
-.social-media-icons-container svg {
+footer > aside svg {
   height: 29px;
   width: 29px;
   overflow: hidden;
 }
 
-.social-media-icons-container a,
-.social-media-icons-container a:link,
-.social-media-icons-container a:visited,
-.social-media-icons-container a:hover,
-.social-media-icons-container a:active {
+footer > aside a,
+footer > aside a:link,
+footer > aside a:visited,
+footer > aside a:hover,
+footer > aside a:active {
   color: #d8d8d8;
   display: inline-block;
   width: 100%;
@@ -650,53 +632,54 @@ h3 {
   background-color: transparent;
 }
 
-.social-media-icons-container .facebook-icon-container button:active svg,
-.social-media-icons-container .facebook-icon-container button:hover svg {
+footer > aside .facebook-icon span:active svg,
+footer > aside .facebook-icon span:hover svg {
   color: #3b5998;
 }
 
-.social-media-icons-container .linkedin-icon-container button:active svg,
-.social-media-icons-container .linkedin-icon-container button:hover svg {
+footer > aside .linkedin-icon span:active svg,
+footer > aside .linkedin-icon span:hover svg {
   color: #007bb6;
 }
 
-.social-media-icons-container .twitter-icon-container button:active svg,
-.social-media-icons-container .twitter-icon-container button:hover svg {
+footer > aside .twitter-icon span:active svg,
+footer > aside .twitter-icon span:hover svg {
   color: #00aced;
 }
 
-.social-media-icons-container .gmail-icon-container button:active svg,
-.social-media-icons-container .gmail-icon-container button:hover svg {
+footer > aside .gmail-icon span:active svg,
+footer > aside .gmail-icon span:hover svg {
   color: #c51634;
 }
 
-.social-media-icons-container .github-icon-container button:active svg,
-.social-media-icons-container .github-icon-container button:hover svg {
+footer > aside .github-icon span:active svg,
+footer > aside .github-icon span:hover svg {
   color: white;
 }
 
-.social-media-icons-container .codepen-icon-container button:active svg,
-.social-media-icons-container .codepen-icon-container button:hover svg {
+footer > aside .codepen-icon span:active svg,
+footer > aside .codepen-icon span:hover svg {
   color: white;
 }
 
-.footer-text-box {
+footer .footer-text-box {
   width: 50%;
   height: 60px;
+  margin: 0;
   line-height: 60px;
   text-align: center;
   white-space: nowrap;
 }
 
-.footer-text-box .follow-text {
+footer .footer-text-box > span:first-child {
   font-weight: 300;
 }
 
-.footer-text-box .hashtag {
-  font-weight: 600;
+footer .footer-text-box > span:nth-child(2) {
+  font-weight: 500;
 }
 
-.to-top-arrow-container {
+footer .top-arrow {
   width: 25%;
   height: 60px;
   display: -webkit-box;
@@ -714,7 +697,7 @@ h3 {
           align-items: center;
 }
 
-.to-top-arrow-container .to-top-arrow-box {
+footer .top-arrow > div {
   margin: 0 auto;
   width: 40px;
   height: 40px;
@@ -729,7 +712,7 @@ h3 {
   transition: transform 0.15s ease-out, box-shadow 0.2s, -webkit-transform 0.15s ease-out, -webkit-box-shadow 0.2s;
 }
 
-.to-top-arrow-container .to-top-arrow-box a {
+footer .top-arrow > div a {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -739,33 +722,33 @@ h3 {
   color: white;
 }
 
-.to-top-arrow-container .to-top-arrow-box a svg {
+footer .top-arrow > div a svg {
   -webkit-transform: scale(0.75);
           transform: scale(0.75);
 }
 
-.to-top-arrow-container .to-top-arrow-box:hover {
+footer .top-arrow > div:hover {
   -webkit-box-shadow: 0px 0px 15px 4px #0aadf0;
           box-shadow: 0px 0px 15px 4px #0aadf0;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-.to-top-arrow-container .to-top-arrow-box:hover a svg {
+footer .top-arrow > div:hover a svg {
   fill: #0aadf0;
 }
 
 @media screen and (max-width: 680px) {
-  #main {
+  body {
     font-size: 16px;
   }
-  .section1 {
+  main > section:first-of-type {
     height: auto;
   }
 }
 
 @media screen and (max-width: 920px) {
-  .section1 .scroll {
+  main > section:first-of-type .scroll-arrow {
     visibility: hidden;
   }
 }

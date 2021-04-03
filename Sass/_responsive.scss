@@ -8,17 +8,18 @@
 // }
 // }
 //}
+
 @media screen and (max-width: 680px) {
-  #main {
+  body {
     font-size: 16px;
   }
-  .section1 {
+  main > section:first-of-type {
     height: auto;
   }
 }
 
 @media screen and (max-width: 920px) {
-  .section1 .scroll {
+  main > section:first-of-type .scroll-arrow {
     visibility: hidden;
   }
 }

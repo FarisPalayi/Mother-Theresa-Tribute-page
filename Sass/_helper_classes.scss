@@ -1,14 +1,14 @@
-.textAnim {
-  transition: all 0.15s ease-in-out;
+.onHoverBigText {
+  transition: all 1.15s ease-in-out !important;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
   }
 }
 
 .cyan-gradient {
   color: transparent !important;
 
-  background: linear-gradient(to bottom right, $cyan , #66defc) !important;
+  background: linear-gradient(to bottom right, $cyan, #66defc) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
 }

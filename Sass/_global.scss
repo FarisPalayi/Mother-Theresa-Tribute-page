@@ -5,10 +5,13 @@ h4,
 h5,
 h6 {
   color: $cyan;
+  width: 100%;
+  text-align: center;
 }
 p {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  //font-size: calc(1em + (2 - 1) * ((100vw - 20em) / (100 - 20)));
   line-height: 1.65rem;
 }
 ul {
