@@ -1,3 +1,25 @@
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/roboto-v20-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("./fonts/roboto-v20-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto-v20-latin-regular.woff2") format("woff2"), url("./fonts/roboto-v20-latin-regular.woff") format("woff"), url("./fonts/roboto-v20-latin-regular.ttf") format("truetype"), url("./fonts/roboto-v20-latin-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/open-sans-v18-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("./fonts/open-sans-v18-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/open-sans-v18-latin-regular.woff2") format("woff2"), url("./fonts/open-sans-v18-latin-regular.woff") format("woff"), url("./fonts/open-sans-v18-latin-regular.ttf") format("truetype"), url("./fonts/open-sans-v18-latin-regular.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
 /*rgb(42, 154, 132)*/
 @-webkit-keyframes from-top {
   0% {
@@ -372,9 +394,9 @@ main > section:nth-of-type(2) {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
