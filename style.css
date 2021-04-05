@@ -104,6 +104,28 @@
   }
 }
 
+@-webkit-keyframes source {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0.45;
+  }
+}
+
+@keyframes source {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0.45;
+  }
+}
+
 @-webkit-keyframes hover {
   100% {
     -webkit-transform: scale(1.04);
@@ -337,6 +359,10 @@ main > section:first-of-type .left .main-image-source {
   font-size: 0.6rem;
   opacity: 0.45;
   margin-left: 0.6vw;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-animation: source 200ms forwards 5010ms;
+          animation: source 200ms forwards 5010ms;
 }
 
 main > section:first-of-type .scroll-arrow {
@@ -363,7 +389,7 @@ main > section:first-of-type .scroll-arrow:focus {
   outline: none;
 }
 
-main > section:first-of-type .scroll-arrow:focus::before {
+main > section:first-of-type .scroll-arrow::before {
   content: "";
   position: absolute;
   width: 65px;
@@ -371,10 +397,19 @@ main > section:first-of-type .scroll-arrow:focus::before {
   border-radius: 50%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-transition-delay: 0.19s;
+          transition-delay: 0.19s;
+  border: 1px solid transparent;
+}
+
+main > section:first-of-type .scroll-arrow:focus::before {
   border: 1px solid gray;
 }
 
-main > section:first-of-type .scroll-arrow:hover svg #path10 {
+main > section:first-of-type .scroll-arrow:hover svg #path10,
+main > section:first-of-type .scroll-arrow:focus svg #path10 {
   fill: #0aadf0 !important;
 }
 
@@ -556,6 +591,7 @@ main > aside ul li a:visited {
 }
 
 main > aside ul li a:focus {
+  outline: none;
   border-bottom: solid #0aadf0;
 }
 
@@ -659,33 +695,63 @@ footer > aside a:active {
   background-color: transparent;
 }
 
-footer > aside .facebook-icon span:active svg,
-footer > aside .facebook-icon span:hover svg {
+footer > aside .facebook-icon a {
+  outline: none;
+}
+
+footer > aside .facebook-icon a:active svg,
+footer > aside .facebook-icon a:focus svg,
+footer > aside .facebook-icon a:hover svg {
   color: #3b5998;
 }
 
-footer > aside .linkedin-icon span:active svg,
-footer > aside .linkedin-icon span:hover svg {
+footer > aside .linkedin-icon a {
+  outline: none;
+}
+
+footer > aside .linkedin-icon a:active svg,
+footer > aside .linkedin-icon a:focus svg,
+footer > aside .linkedin-icon a:hover svg {
   color: #007bb6;
 }
 
-footer > aside .twitter-icon span:active svg,
-footer > aside .twitter-icon span:hover svg {
+footer > aside .twitter-icon a {
+  outline: none;
+}
+
+footer > aside .twitter-icon a:active svg,
+footer > aside .twitter-icon a:focus svg,
+footer > aside .twitter-icon a:hover svg {
   color: #00aced;
 }
 
-footer > aside .gmail-icon span:active svg,
-footer > aside .gmail-icon span:hover svg {
+footer > aside .gmail-icon a {
+  outline: none;
+}
+
+footer > aside .gmail-icon a:active svg,
+footer > aside .gmail-icon a:focus svg,
+footer > aside .gmail-icon a:hover svg {
   color: #c51634;
 }
 
-footer > aside .github-icon span:active svg,
-footer > aside .github-icon span:hover svg {
+footer > aside .github-icon a {
+  outline-color: #0aadf0;
+}
+
+footer > aside .github-icon a:active svg,
+footer > aside .github-icon a:focus svg,
+footer > aside .github-icon a:hover svg {
   color: white;
 }
 
-footer > aside .codepen-icon span:active svg,
-footer > aside .codepen-icon span:hover svg {
+footer > aside .codepen-icon a {
+  outline-color: #0aadf0;
+}
+
+footer > aside .codepen-icon a:active svg,
+footer > aside .codepen-icon a:focus svg,
+footer > aside .codepen-icon a:hover svg {
   color: white;
 }
 
@@ -741,6 +807,7 @@ footer .top-arrow a {
   transition: -webkit-transform 0.15s ease-out, -webkit-box-shadow 0.2s;
   transition: transform 0.15s ease-out, box-shadow 0.2s;
   transition: transform 0.15s ease-out, box-shadow 0.2s, -webkit-transform 0.15s ease-out, -webkit-box-shadow 0.2s;
+  outline: none;
 }
 
 footer .top-arrow a svg {

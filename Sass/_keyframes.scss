@@ -35,6 +35,17 @@
   }
 }
 
+@keyframes source {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0.45;
+  }
+}
+
 @keyframes hover {
   100% {
     transform: scale(1.04);
