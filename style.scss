@@ -62,10 +62,6 @@ body {
   font-family: sans-serif;
   width: 100%;
   overflow-x: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: start;
 }
 
 ::selection {
@@ -144,7 +140,7 @@ main {
         margin: 0 auto;
         max-height: 100vh;
         overflow: hidden;
-        //styles for Alt text
+        //styles for Alt (attribute) text
         font-size: 0.8rem;
         color: rgb(156, 156, 156);
       }
@@ -168,55 +164,40 @@ main {
       transform: translate(0%, 30%) rotate(90deg);
       transition: all 0.2s;
 
-      height: 70px;
-      width: 70px;
+      height: 65px;
+      width: 65px;
       text-align: center;
       //line-height: 50px;
       bottom: 20px;
       overflow: hidden;
 
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   //background-color: #f00;
-      //   width: 70px;
-      //   height: 70px;
-      //   border-radius: 50%;
-      //   transition: all 0.2s;
-      //   transform: scale(0.75);
-      //   border: 1px solid gray;
-      //   opacity: 0;
-      // }
-      // &:hover::before {
-      //   transform: scale(1);
-      //   opacity: 1;
-      //   border: .8px solid $darkCyan;
-      // }
+      &:focus {
+        outline: none;
+      }
+      &:focus::before {
+        content: "";
+        position: absolute;
+        //background-color: #f00;
+        width: 65px;
+        height: 65px;
 
-      &:hover {
-        transform: translate(0%, 30%) rotate(90deg) scale(1.08);
+        border-radius: 50%;
+        transition: all 0.2s;
+        border: 1px solid gray;
       }
 
       &:hover svg #path10 {
         fill: $cyan !important;
       }
-
       svg {
         position: relative;
         transform: translate(-50%, -50%) rotate(-90deg);
         top: 50%;
         left: calc(50% + 5px);
-
         //height: 50px;
         // width: 50px;
         //bottom: 10px;
       }
-
-      &:focus {
-        visibility: hidden;
-        // animation:none;
-      }
-
       animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
     }
   }
@@ -235,10 +216,6 @@ main {
       min-width: 300px;
       width: 40%;
 
-      h3 {
-        font-family: "Roboto", sans-serif;
-      }
-
       ul {
         list-style-type: none;
         padding: 0;
@@ -246,6 +223,13 @@ main {
         li {
           display: grid;
           grid-template-columns: 6fr 1fr 9fr;
+
+          .key {
+            min-width: 100px;
+          }
+          .colon {
+            text-align: center;
+          }
         }
       }
     }
@@ -325,6 +309,9 @@ main {
           }
           &:visited {
             color: hsl(190, 75%, 35%);
+          }
+          &:focus {
+            border-bottom: solid $cyan;
           }
         }
       }
@@ -469,38 +456,61 @@ footer {
     height: 60px;
     @include flexBox(row, center, center);
 
-    > div {
+    a {
+      position: relative;
       margin: 0 auto;
       width: 40px;
       height: 40px;
       text-align: center;
       border-radius: 50%;
       box-shadow: 0px 0px 10px 5px rgb(63, 63, 63);
-      overflow: hidden;
+      text-align: center;
+      line-height: 47.5px;
+      text-decoration: none;
+      color: white;
       transition: transform 0.15s ease-out, box-shadow 0.2s;
 
-      a {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        line-height: 47.5px;
-        text-decoration: none;
-        color: white;
-
-        svg {
-          transform: scale(0.75);
-        }
+      svg {
+        transform: scale(0.75);
       }
-      &:hover {
+      &:focus {
+        outline: none;
+      }
+      &:hover,
+      &:focus {
         //background-color: rgba(214, 214, 214, 0.562);
         box-shadow: 0px 0px 15px 4px $cyan;
         transform: translateY(-5px);
-        a svg {
+        outline: none;
+        svg {
           fill: $cyan;
         }
+      }
+
+      &::after {
+        content: "Press Enter";
+        position: absolute;
+        height: 25px;
+        width: 70px;
+        line-height: 25px;
+        color: #b1b1b1;
+        font-size: 0.7rem;
+        opacity: 0.7;
+        top: 100%;
+        left: 100%;
+        border: 1px solid #b1b1b1d2;
+        white-space: nowrap;
+        border-radius: 2px;
+        transition: all 0.1s;
+        transition-delay: 0.19s;
+
+        opacity: 0;
+      }
+      &:focus::after {
+        opacity: 1;
       }
     }
   }
 }
 @import "Sass/responsive";
+@import "Sass/mobile-only";
