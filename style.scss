@@ -69,6 +69,7 @@ body {
 }
 
 main {
+  //FIRST SECTION
   > section:first-of-type {
     position: relative;
     @include flexBox(row, center, center);
@@ -211,7 +212,7 @@ main {
       animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
     }
   }
-
+  //MAIN SECTION
   > section:nth-of-type(2) {
     @include flexBox(row-reverse, center, center);
     flex-wrap: wrap;
@@ -264,7 +265,7 @@ main {
       }
     }
   }
-
+  //LIFE EVENTS
   > section:nth-of-type(3) {
     width: 100%;
     padding: 1em;
@@ -290,7 +291,7 @@ main {
       }
     }
   }
-
+  //RELATED CONTENT
   > aside {
     width: 100%;
     height: auto;
@@ -483,6 +484,7 @@ footer {
     }
     > span:nth-child(2) {
       font-weight: 500;
+      color: $cyan;
     }
   }
 
