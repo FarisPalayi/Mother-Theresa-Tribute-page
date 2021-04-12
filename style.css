@@ -299,8 +299,10 @@ main > section:first-of-type .right h1 {
   opacity: 0;
   -webkit-transform: translate(0%, -100%);
           transform: translate(0%, -100%);
-  -webkit-animation: from-top 1000ms ease-out 1000ms forwards;
-          animation: from-top 1000ms ease-out 1000ms forwards;
+  -webkit-animation: from-top 1000ms ease-out forwards;
+          animation: from-top 1000ms ease-out forwards;
+  -webkit-animation-delay: calc(var(--order) * 1000ms);
+          animation-delay: calc(var(--order) * 1000ms);
 }
 
 main > section:first-of-type .right h1:hover {
@@ -319,8 +321,10 @@ main > section:first-of-type .right .subtitle {
   opacity: 0;
   -webkit-transform: translate(0%, -100%);
           transform: translate(0%, -100%);
-  -webkit-animation: from-top 1000ms ease-out 2000ms forwards;
-          animation: from-top 1000ms ease-out 2000ms forwards;
+  -webkit-animation: from-top 1000ms ease-out forwards;
+          animation: from-top 1000ms ease-out forwards;
+  -webkit-animation-delay: calc(var(--order) * 1000ms);
+          animation-delay: calc(var(--order) * 1000ms);
 }
 
 main > section:first-of-type .right blockquote {
@@ -330,8 +334,10 @@ main > section:first-of-type .right blockquote {
   color: #a9eb67;
   font-family: serif;
   opacity: 0;
-  -webkit-animation: opacity 1500ms ease-out 3500ms forwards;
-          animation: opacity 1500ms ease-out 3500ms forwards;
+  -webkit-animation: opacity 1500ms ease-out forwards;
+          animation: opacity 1500ms ease-out forwards;
+  -webkit-animation-delay: calc(var(--order) * 1000ms + 500ms);
+          animation-delay: calc(var(--order) * 1000ms + 500ms);
 }
 
 main > section:first-of-type .left {
@@ -339,8 +345,10 @@ main > section:first-of-type .left {
   min-width: 320px;
   margin: 0;
   opacity: 0;
-  -webkit-animation: opacity 3000ms forwards 5000ms;
-          animation: opacity 3000ms forwards 5000ms;
+  -webkit-animation: opacity 3000ms forwards;
+          animation: opacity 3000ms forwards;
+  -webkit-animation-delay: calc(var(--order) * 1000ms);
+          animation-delay: calc(var(--order) * 1000ms);
 }
 
 main > section:first-of-type .left img {
@@ -408,8 +416,8 @@ main > section:first-of-type .scroll-arrow:focus::before {
   border: 1px solid gray;
 }
 
-main > section:first-of-type .scroll-arrow:hover svg #path10,
-main > section:first-of-type .scroll-arrow:focus svg #path10 {
+main > section:first-of-type .scroll-arrow:hover svg #down-path,
+main > section:first-of-type .scroll-arrow:focus svg #down-path {
   fill: #0aadf0 !important;
 }
 
