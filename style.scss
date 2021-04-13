@@ -159,8 +159,8 @@ main {
         animation: source 200ms forwards 5010ms;
       }
       opacity: 0;
-      animation: opacity 3000ms forwards; //5000ms
-      animation-delay: calc(var(--order) * 1000ms);
+      animation: opacity 3000ms 5000ms forwards; //5000ms
+      //animation-delay: calc(var(--order) * 1000ms);
     }
 
     .scroll-arrow {

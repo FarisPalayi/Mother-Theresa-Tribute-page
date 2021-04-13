@@ -345,10 +345,8 @@ main > section:first-of-type .left {
   min-width: 320px;
   margin: 0;
   opacity: 0;
-  -webkit-animation: opacity 3000ms forwards;
-          animation: opacity 3000ms forwards;
-  -webkit-animation-delay: calc(var(--order) * 1000ms);
-          animation-delay: calc(var(--order) * 1000ms);
+  -webkit-animation: opacity 3000ms 5000ms forwards;
+          animation: opacity 3000ms 5000ms forwards;
 }
 
 main > section:first-of-type .left img {
