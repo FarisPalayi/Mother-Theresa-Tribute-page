@@ -45,6 +45,7 @@
 *::after {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition:all .2s;
 }
 html,
 body {
@@ -340,18 +341,19 @@ main {
           left: 0;
           padding-right: 5%;
           padding-left: 1%;
-          display: flex;
-          align-items: center;
+          @include flexBox(row,flex-end,center);
           
           p{
             margin: 0;
-            width: 100%;
             text-align: right;
-            min-height: 30px;
-            height: 100%;
             @include flexBox(row,flex-end,center);
             color: #a9eb67;
             font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
+            transition:all .2s ease-in-out;
+
+            &:hover{
+              transform: scale(1.1);
+            }
           }
         }
         .event-details-box{
@@ -385,9 +387,11 @@ main {
               @include flexBox(row,flex-start,center);
               color: black;
               background-color:white;
+              background-image: linear-gradient(45deg,white 50%,$cyan 50%);
               border-radius: 7px;
               padding: 15px;
               font-size: .9rem;
+              transition:all .2s;
 
               // ARROW
               &::before{
@@ -403,7 +407,11 @@ main {
                 top: 50%;
                 transform:translateY(-50%);
               }
-              
+              &:hover{
+                box-shadow: 1.5px 1.5px 5px #0aadf0;
+                //background-image: linear-gradient(white,white);
+                transform: scale(1.01);
+              }
             }
         }
       }
@@ -424,18 +432,19 @@ main {
           right: 0;
           padding-left: 5%;
           padding-right: 1%;
-          display: flex;
-          align-items: center;
+          @include flexBox(row,flex-start,center);
           
           p{
             margin: 0;
-            width: 100%;
             text-align: left;
-            min-height: 30px;
-            height: 100%;
             @include flexBox(row,flex-start,center);
             color: #a9eb67;
             font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
+            transition:all .2s ease-in-out;
+
+            &:hover{
+              transform: scale(1.1);
+            }
           }
         }
         .event-details-box{
@@ -469,10 +478,13 @@ main {
               @include flexBox(row,flex-start,center);
               color: black;
               background-color:white;
+              background-image: linear-gradient(white,white);
+              background-image: linear-gradient(45deg,$cyan 50%,white 50%);
               border-radius: 7px;
               padding: 15px;
               font-size: .9rem;
-
+              transition:all .2s ease-out;
+              
               // ARROW
               &::before{
                 content: '';
@@ -487,7 +499,12 @@ main {
                 top: 50%;
                 transform:translateY(-50%);
               }
-              
+              &:hover{
+                box-shadow: 1.5px 1.5px 5px #0aadf0;
+                //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
+                //background-image: linear-gradient(white,white);
+                transform: scale(1.01);
+              }
             }
         }
       }

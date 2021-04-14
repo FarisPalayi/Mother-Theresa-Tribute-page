@@ -219,6 +219,8 @@ ul li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 html,
@@ -622,6 +624,13 @@ main > section:nth-of-type(3) > section .right-side .year-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -629,10 +638,7 @@ main > section:nth-of-type(3) > section .right-side .year-container {
 
 main > section:nth-of-type(3) > section .right-side .year-container p {
   margin: 0;
-  width: 100%;
   text-align: right;
-  min-height: 30px;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,6 +654,13 @@ main > section:nth-of-type(3) > section .right-side .year-container p {
           align-items: center;
   color: #a9eb67;
   font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+main > section:nth-of-type(3) > section .right-side .year-container p:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main > section:nth-of-type(3) > section .right-side .event-details-box {
@@ -705,9 +718,12 @@ main > section:nth-of-type(3) > section .right-side .event-details-box p {
           align-items: center;
   color: black;
   background-color: white;
+  background-image: linear-gradient(45deg, white 50%, #0aadf0 50%);
   border-radius: 7px;
   padding: 15px;
   font-size: .9rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 main > section:nth-of-type(3) > section .right-side .event-details-box p::before {
@@ -723,6 +739,13 @@ main > section:nth-of-type(3) > section .right-side .event-details-box p::before
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+main > section:nth-of-type(3) > section .right-side .event-details-box p:hover {
+  -webkit-box-shadow: 1.5px 1.5px 5px #0aadf0;
+          box-shadow: 1.5px 1.5px 5px #0aadf0;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 main > section:nth-of-type(3) > section .left-side {
@@ -756,6 +779,13 @@ main > section:nth-of-type(3) > section .left-side .year-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -763,10 +793,7 @@ main > section:nth-of-type(3) > section .left-side .year-container {
 
 main > section:nth-of-type(3) > section .left-side .year-container p {
   margin: 0;
-  width: 100%;
   text-align: left;
-  min-height: 30px;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -782,6 +809,13 @@ main > section:nth-of-type(3) > section .left-side .year-container p {
           align-items: center;
   color: #a9eb67;
   font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+main > section:nth-of-type(3) > section .left-side .year-container p:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main > section:nth-of-type(3) > section .left-side .event-details-box {
@@ -839,9 +873,14 @@ main > section:nth-of-type(3) > section .left-side .event-details-box p {
           align-items: center;
   color: black;
   background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+  background-image: linear-gradient(white, white);
+  background-image: linear-gradient(45deg, #0aadf0 50%, white 50%);
   border-radius: 7px;
   padding: 15px;
   font-size: .9rem;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
 main > section:nth-of-type(3) > section .left-side .event-details-box p::before {
@@ -857,6 +896,13 @@ main > section:nth-of-type(3) > section .left-side .event-details-box p::before 
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+main > section:nth-of-type(3) > section .left-side .event-details-box p:hover {
+  -webkit-box-shadow: 1.5px 1.5px 5px #0aadf0;
+          box-shadow: 1.5px 1.5px 5px #0aadf0;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 main > aside {
