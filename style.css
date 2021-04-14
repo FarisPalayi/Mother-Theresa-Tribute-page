@@ -549,19 +549,6 @@ main > section:nth-of-type(3) > h2 {
   margin-bottom: 60px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  color: transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0aadf0), to(#0aadf0));
-  background: linear-gradient(#0aadf0, #0aadf0);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-main > section:nth-of-type(3) > h2:hover {
-  color: transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0aadf0), to(#d4d4d4));
-  background: linear-gradient(#0aadf0, #d4d4d4);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 main > section:nth-of-type(3) > section {

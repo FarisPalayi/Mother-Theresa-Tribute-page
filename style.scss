@@ -284,16 +284,16 @@ main {
       margin-bottom: 60px;
       transition: all 0.3s;
 
-      color: transparent;
-      background: linear-gradient($cyan, $cyan);
-      background-clip: text;
-      -webkit-background-clip: text;
+      // color: transparent;
+      // background: linear-gradient($cyan, $cyan);
+      // background-clip: text;
+      // -webkit-background-clip: text;
 
       &:hover {
-        color: transparent;
-        background: linear-gradient($cyan, rgb(212, 212, 212));
-        background-clip: text;
-        -webkit-background-clip: text;
+        // color: transparent;
+        // background: linear-gradient($cyan, rgb(212, 212, 212));
+        // background-clip: text;
+        // -webkit-background-clip: text;
       }
     }
 
