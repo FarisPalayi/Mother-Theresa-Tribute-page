@@ -566,7 +566,7 @@ main > section:nth-of-type(3) > section::before {
   position: absolute;
   width: 5px;
   height: 100%;
-  background-color: #0aadf0;
+  background-color: gray;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -640,6 +640,7 @@ main > section:nth-of-type(3) > section .right-side .year-container p {
       -ms-flex-align: center;
           align-items: center;
   color: #a9eb67;
+  color: #0aadf0;
   font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -675,6 +676,7 @@ main > section:nth-of-type(3) > section .right-side .event-details-box::after {
   height: 18px;
   width: 18px;
   background-color: #ff6600;
+  background-color: #0aadf0;
   border-radius: 50%;
   left: -11px;
   top: 50%;
@@ -705,7 +707,8 @@ main > section:nth-of-type(3) > section .right-side .event-details-box p {
           align-items: center;
   color: black;
   background-color: white;
-  background-image: linear-gradient(45deg, white 50%, #0aadf0 50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+  background-image: linear-gradient(white, white);
   border-radius: 7px;
   padding: 15px;
   font-size: .9rem;
@@ -795,6 +798,7 @@ main > section:nth-of-type(3) > section .left-side .year-container p {
       -ms-flex-align: center;
           align-items: center;
   color: #a9eb67;
+  color: #0aadf0;
   font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -830,6 +834,7 @@ main > section:nth-of-type(3) > section .left-side .event-details-box::after {
   height: 18px;
   width: 18px;
   background-color: #ff6600;
+  background-color: #0aadf0;
   border-radius: 50%;
   right: -11.5px;
   top: 50%;
@@ -862,7 +867,6 @@ main > section:nth-of-type(3) > section .left-side .event-details-box p {
   background-color: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
   background-image: linear-gradient(white, white);
-  background-image: linear-gradient(45deg, #0aadf0 50%, white 50%);
   border-radius: 7px;
   padding: 15px;
   font-size: .9rem;

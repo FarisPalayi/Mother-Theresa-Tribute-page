@@ -307,12 +307,13 @@ main {
       max-width: 1000px;
       overflow: hidden;
 
+      // Middle line
       &::before{
         content: "";
         position: absolute;
         width: 5px;
         height: 100%;
-        background-color: $cyan;
+        background-color: gray;
         left: 50%;
         transform:translate(-50%);
       }
@@ -348,6 +349,7 @@ main {
             text-align: right;
             @include flexBox(row,flex-end,center);
             color: #a9eb67;
+            color:$cyan;
             font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
             transition:all .2s ease-in-out;
 
@@ -369,12 +371,12 @@ main {
               height: 18px;
               width: 18px;
               background-color: #ff6600;
+              background-color: $cyan;
               border-radius: 50%;
               left: -11px;
               top: 50%;
               transform:translateY(-50%);
             }
-
 
             p{
               position: relative;
@@ -387,7 +389,8 @@ main {
               @include flexBox(row,flex-start,center);
               color: black;
               background-color:white;
-              background-image: linear-gradient(45deg,white 50%,$cyan 50%);
+              //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
+              background-image: linear-gradient(white ,white);
               border-radius: 7px;
               padding: 15px;
               font-size: .9rem;
@@ -410,6 +413,7 @@ main {
               &:hover{
                 box-shadow: 1.5px 1.5px 5px #0aadf0;
                 //background-image: linear-gradient(white,white);
+                //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
                 transform: scale(1.01);
               }
             }
@@ -439,6 +443,7 @@ main {
             text-align: left;
             @include flexBox(row,flex-start,center);
             color: #a9eb67;
+            color: $cyan;
             font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
             transition:all .2s ease-in-out;
 
@@ -460,12 +465,12 @@ main {
               height: 18px;
               width: 18px;
               background-color: #ff6600;
+              background-color: $cyan;
               border-radius: 50%;
               right: -11.5px;
               top: 50%;
               transform:translateY(-50%);
             }
-
 
             p{
               position: relative;
@@ -479,7 +484,7 @@ main {
               color: black;
               background-color:white;
               background-image: linear-gradient(white,white);
-              background-image: linear-gradient(45deg,$cyan 50%,white 50%);
+              //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
               border-radius: 7px;
               padding: 15px;
               font-size: .9rem;
