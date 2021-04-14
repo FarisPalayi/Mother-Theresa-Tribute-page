@@ -525,6 +525,19 @@ main > section:nth-of-type(3) {
   padding: 1em;
   min-height: 100vh;
   background-color: rgba(85, 19, 19, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main > section:nth-of-type(3) > h2 {
@@ -551,11 +564,11 @@ main > section:nth-of-type(3) > h2:hover {
 
 main > section:nth-of-type(3) > section {
   position: relative;
-  background-color: #fff;
   min-width: 500px;
-  min-height: 300px;
+  min-height: 500px;
   width: 100%;
   height: 100%;
+  max-width: 1000px;
   overflow: hidden;
 }
 
@@ -571,21 +584,279 @@ main > section:nth-of-type(3) > section::before {
 }
 
 main > section:nth-of-type(3) > section .right-side, main > section:nth-of-type(3) > section .left-side {
-  position: absolute;
+  position: relative;
   min-width: 150px;
-  min-height: 500px;
-  width: calc(50% - 2.5px);
-  height: 100%;
+  min-height: 80px;
+  width: 100%;
+  height: 130px;
 }
 
 main > section:nth-of-type(3) > section .right-side {
-  background-color: #ff0;
+  padding: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > section:nth-of-type(3) > section .right-side .year-container, main > section:nth-of-type(3) > section .right-side .event-details-box {
+  position: absolute;
+  width: calc(50% - 2.5px);
+  height: calc(100% - 10px);
+}
+
+main > section:nth-of-type(3) > section .right-side .year-container {
+  left: 0;
+  padding-right: 5%;
+  padding-left: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > section:nth-of-type(3) > section .right-side .year-container p {
+  margin: 0;
+  width: 100%;
+  text-align: right;
+  min-height: 30px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a9eb67;
+  font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
+}
+
+main > section:nth-of-type(3) > section .right-side .event-details-box {
   right: 0;
+  padding-left: 5%;
+  padding-right: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > section:nth-of-type(3) > section .right-side .event-details-box::after {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  left: -11px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main > section:nth-of-type(3) > section .right-side .event-details-box p {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
+  min-height: 50px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background-color: white;
+  border-radius: 7px;
+  padding: 15px;
+  font-size: .9rem;
+}
+
+main > section:nth-of-type(3) > section .right-side .event-details-box p::before {
+  content: '';
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border-top: solid 8px transparent;
+  border-bottom: solid 8px transparent;
+  border-right: solid 15px white;
+  border-left: solid 15px transparent;
+  left: -29px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 main > section:nth-of-type(3) > section .left-side {
-  background-color: #f0f;
+  padding: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > section:nth-of-type(3) > section .left-side .year-container, main > section:nth-of-type(3) > section .left-side .event-details-box {
+  position: absolute;
+  width: calc(50% - 2.5px);
+  height: calc(100% - 10px);
+}
+
+main > section:nth-of-type(3) > section .left-side .year-container {
+  right: 0;
+  padding-left: 5%;
+  padding-right: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > section:nth-of-type(3) > section .left-side .year-container p {
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  min-height: 30px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a9eb67;
+  font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
+}
+
+main > section:nth-of-type(3) > section .left-side .event-details-box {
   left: 0;
+  padding-right: 5%;
+  padding-left: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > section:nth-of-type(3) > section .left-side .event-details-box::after {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  right: -11px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main > section:nth-of-type(3) > section .left-side .event-details-box p {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
+  min-height: 50px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background-color: white;
+  border-radius: 7px;
+  padding: 15px;
+  font-size: .9rem;
+}
+
+main > section:nth-of-type(3) > section .left-side .event-details-box p::before {
+  content: '';
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border-top: solid 8px transparent;
+  border-bottom: solid 8px transparent;
+  border-left: solid 15px white;
+  border-right: solid 15px transparent;
+  right: -29px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 main > aside {
