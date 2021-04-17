@@ -165,16 +165,14 @@ main {
       font-size: 4rem;
       transform-origin: center;
       left: 50%;
-      transform: translate(-50%,0%) rotate(90deg);
+      transform: translate(-50%,20%) rotate(90deg);
       transition: all 0.2s;
 
       height: 65px;
       width: 65px;
       text-align: center;
-      //line-height: 50px;
       bottom: 20px;
-      overflow: hidden;
-
+      
       &:focus {
         outline: none;
       }

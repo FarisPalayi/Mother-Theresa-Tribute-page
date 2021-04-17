@@ -377,15 +377,14 @@ main > section:first-of-type .scroll-arrow {
   -webkit-transform-origin: center;
           transform-origin: center;
   left: 50%;
-  -webkit-transform: translate(-50%, 0%) rotate(90deg);
-          transform: translate(-50%, 0%) rotate(90deg);
+  -webkit-transform: translate(-50%, 20%) rotate(90deg);
+          transform: translate(-50%, 20%) rotate(90deg);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 65px;
   width: 65px;
   text-align: center;
   bottom: 20px;
-  overflow: hidden;
   -webkit-animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
           animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
 }
