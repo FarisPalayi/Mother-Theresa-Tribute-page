@@ -225,20 +225,49 @@ main {
       @include flexBox(column, flex-start, center);
       min-width: 300px;
       width: 40%;
+      overflow: auto;
 
       ul {
         list-style-type: none;
         padding: 0;
 
         li {
-          display: grid;
-          grid-template-columns: 6fr 1fr 9fr;
+          width: 100%;
+          display: inline-block;
+          display: flex;
+          
 
           .key {
-            min-width: 100px;
+            display: inline-block;
+            width: 38.25%;
+            
           }
           .colon {
+            display: inline-block;
+            width: 6.25%;
             text-align: center;
+          }
+          .value{
+            display: inline-block;
+            width: 53.25%;
+          }
+
+          @supports(display:grid){
+            display: grid;
+            grid-template-columns: 6fr 1fr 9fr;
+
+            .key {
+              display: inline;
+              width: auto;
+            }
+            .colon {
+              display: inline;
+              width: auto;
+            }
+            .value {
+              display: inline;
+              width: auto;
+            }
           }
         }
       }
@@ -246,7 +275,8 @@ main {
 
     > div {
       padding: 1em;
-      @include flexBox(column, flex-start, center);
+      display: flex;
+      flex-direction: column;
       min-width: 250px;
       width: 60%;
 
@@ -705,14 +735,16 @@ footer {
   }
 
   .top-arrow {
+    min-width: 44px;
     width: 25%;
     height: 60px;
-    @include flexBox(row, center, center);
+    padding: 10px 0;
 
 
     a {
       position: relative;
-      margin: 0 auto;
+      display: block;
+      margin: auto;
       width: 40px;
       height: 40px;
       text-align: center;

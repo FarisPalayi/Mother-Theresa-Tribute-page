@@ -205,7 +205,7 @@ ul li {
           transform: scale(1.05) !important;
 }
 
-@supports (background-clip: text) {
+@supports (background-clip: text) or (-webkit-background-clip: text) {
   .cyan-gradient {
     color: transparent !important;
     background: -webkit-gradient(linear, left top, right bottom, from(#0aadf0), to(#66defc)) !important;
@@ -465,6 +465,7 @@ main > section:nth-of-type(2) > aside {
           align-items: center;
   min-width: 300px;
   width: 40%;
+  overflow: auto;
 }
 
 main > section:nth-of-type(2) > aside ul {
@@ -473,18 +474,48 @@ main > section:nth-of-type(2) > aside ul {
 }
 
 main > section:nth-of-type(2) > aside ul li {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 6fr 1fr 9fr;
-      grid-template-columns: 6fr 1fr 9fr;
+  width: 100%;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main > section:nth-of-type(2) > aside ul li .key {
-  min-width: 100px;
+  display: inline-block;
+  width: 38.25%;
 }
 
 main > section:nth-of-type(2) > aside ul li .colon {
+  display: inline-block;
+  width: 6.25%;
   text-align: center;
+}
+
+main > section:nth-of-type(2) > aside ul li .value {
+  display: inline-block;
+  width: 53.25%;
+}
+
+@supports (display: grid) {
+  main > section:nth-of-type(2) > aside ul li {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 6fr 1fr 9fr;
+        grid-template-columns: 6fr 1fr 9fr;
+  }
+  main > section:nth-of-type(2) > aside ul li .key {
+    display: inline;
+    width: auto;
+  }
+  main > section:nth-of-type(2) > aside ul li .colon {
+    display: inline;
+    width: auto;
+  }
+  main > section:nth-of-type(2) > aside ul li .value {
+    display: inline;
+    width: auto;
+  }
 }
 
 main > section:nth-of-type(2) > div {
@@ -496,12 +527,6 @@ main > section:nth-of-type(2) > div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-width: 250px;
   width: 60%;
 }
@@ -1124,26 +1149,16 @@ footer .footer-text-box > span:nth-child(2) {
 }
 
 footer .top-arrow {
+  min-width: 44px;
   width: 25%;
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 10px 0;
 }
 
 footer .top-arrow a {
   position: relative;
-  margin: 0 auto;
+  display: block;
+  margin: auto;
   width: 40px;
   height: 40px;
   text-align: center;
