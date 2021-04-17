@@ -58,12 +58,11 @@ body {
   background-color: $black;
   color: $silver;
   margin: 1.5em 0;
-  margin-bottom: -15px;
   min-height: 200vh;
   font-size: 19.5px;
   font-family: sans-serif;
   width: 100%;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 ::selection {
   background-color: rgba(255, 255, 255, 0.15);
@@ -98,11 +97,7 @@ main {
         opacity: 0;
         transform: translate(0%, -100%);
         animation: from-top 1000ms ease-out forwards;
-        animation-delay: calc(var(--order) * 1000ms);
-
-        &:hover {
-          transform: scale(1.04);
-        }
+        animation-delay: 1000ms;
       }
       .subtitle {
         color: #4abeb9;
@@ -116,7 +111,7 @@ main {
         opacity: 0;
         transform: translate(0%, -100%);
         animation: from-top 1000ms ease-out forwards;
-        animation-delay: calc(var(--order) * 1000ms);
+        animation-delay: 2000ms;
       }
       blockquote {
         text-align: center;
@@ -128,7 +123,7 @@ main {
         opacity: 0;
         //transform: translate(0%, -100%);
         animation: opacity 1500ms ease-out forwards;
-        animation-delay: calc(var(--order) * 1000ms + 500ms);
+        animation-delay: 3500ms;
       }
     }
 
@@ -160,8 +155,8 @@ main {
         animation: source 200ms forwards 5010ms;
       }
       opacity: 0;
-      animation: opacity 3000ms 5000ms forwards; //5000ms
-      //animation-delay: calc(var(--order) * 1000ms);
+      animation: opacity 3000ms forwards;
+      animation-delay: 5000ms;
     }
 
     .scroll-arrow {
@@ -305,7 +300,6 @@ main {
       width: 100%;
       height: 100%;
       max-width: 1000px;
-      overflow: hidden;
 
       // Middle line
       &::before{
@@ -329,7 +323,6 @@ main {
       .right-side{
         //background-color: rgba(255, 255, 0, 0.589);
         padding: 10px;
-        overflow: hidden;
         @include flexBox(row,center,center);
 
         .year-container,.event-details-box{
@@ -423,7 +416,6 @@ main {
       .left-side{
         //background-color: rgba(255, 0, 255, 0.103);
         padding: 10px;
-        overflow: hidden;
         @include flexBox(row,center,center);
 
         .year-container,.event-details-box{
@@ -565,9 +557,8 @@ footer {
 
   @include flexBox(row, space-around, center);
   flex-wrap: wrap;
-
   &::before {
-    content: "";
+    //content: "";
     position: absolute;
     width: 101%;
     height: 130%;
@@ -595,6 +586,7 @@ footer {
 
   //SOCIAL MEDIA ICONS
   > aside {
+    justify-content: space-around; // fallback for IE
     @include flexBox(row, space-evenly, center);
     width: 25%;
     height: 60px;

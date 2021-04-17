@@ -205,12 +205,14 @@ ul li {
           transform: scale(1.05) !important;
 }
 
-.cyan-gradient {
-  color: transparent !important;
-  background: -webkit-gradient(linear, left top, right bottom, from(#0aadf0), to(#66defc)) !important;
-  background: linear-gradient(to bottom right, #0aadf0, #66defc) !important;
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
+@supports (background-clip: text) {
+  .cyan-gradient {
+    color: transparent !important;
+    background: -webkit-gradient(linear, left top, right bottom, from(#0aadf0), to(#66defc)) !important;
+    background: linear-gradient(to bottom right, #0aadf0, #66defc) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+  }
 }
 
 *,
@@ -234,12 +236,10 @@ body {
   background-color: #0b0c10;
   color: #d8d8d8;
   margin: 1.5em 0;
-  margin-bottom: -15px;
   min-height: 200vh;
   font-size: 19.5px;
   font-family: sans-serif;
   width: 100%;
-  overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -303,13 +303,8 @@ main > section:first-of-type .right h1 {
           transform: translate(0%, -100%);
   -webkit-animation: from-top 1000ms ease-out forwards;
           animation: from-top 1000ms ease-out forwards;
-  -webkit-animation-delay: calc(var(--order) * 1000ms);
-          animation-delay: calc(var(--order) * 1000ms);
-}
-
-main > section:first-of-type .right h1:hover {
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
 main > section:first-of-type .right .subtitle {
@@ -325,8 +320,8 @@ main > section:first-of-type .right .subtitle {
           transform: translate(0%, -100%);
   -webkit-animation: from-top 1000ms ease-out forwards;
           animation: from-top 1000ms ease-out forwards;
-  -webkit-animation-delay: calc(var(--order) * 1000ms);
-          animation-delay: calc(var(--order) * 1000ms);
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
 }
 
 main > section:first-of-type .right blockquote {
@@ -338,8 +333,8 @@ main > section:first-of-type .right blockquote {
   opacity: 0;
   -webkit-animation: opacity 1500ms ease-out forwards;
           animation: opacity 1500ms ease-out forwards;
-  -webkit-animation-delay: calc(var(--order) * 1000ms + 500ms);
-          animation-delay: calc(var(--order) * 1000ms + 500ms);
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
 }
 
 main > section:first-of-type .left {
@@ -347,8 +342,10 @@ main > section:first-of-type .left {
   min-width: 320px;
   margin: 0;
   opacity: 0;
-  -webkit-animation: opacity 3000ms 5000ms forwards;
-          animation: opacity 3000ms 5000ms forwards;
+  -webkit-animation: opacity 3000ms forwards;
+          animation: opacity 3000ms forwards;
+  -webkit-animation-delay: 5000ms;
+          animation-delay: 5000ms;
 }
 
 main > section:first-of-type .left img {
@@ -559,7 +556,6 @@ main > section:nth-of-type(3) > section {
   width: 100%;
   height: 100%;
   max-width: 1000px;
-  overflow: hidden;
 }
 
 main > section:nth-of-type(3) > section::before {
@@ -583,7 +579,6 @@ main > section:nth-of-type(3) > section .right-side, main > section:nth-of-type(
 
 main > section:nth-of-type(3) > section .right-side {
   padding: 10px;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,7 +736,6 @@ main > section:nth-of-type(3) > section .right-side .event-details-box p:hover {
 
 main > section:nth-of-type(3) > section .left-side {
   padding: 10px;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -974,7 +968,6 @@ footer {
 }
 
 footer::before {
-  content: "";
   position: absolute;
   width: 101%;
   height: 130%;
@@ -1001,6 +994,8 @@ footer::after {
 }
 
 footer > aside {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1263,7 +1258,7 @@ footer .top-arrow a:focus::after {
   }
   main > section:first-of-type {
     min-height: auto;
-    padding: 2rem 2rem;
+    padding: 2rem 2.3rem;
     height: auto;
   }
   main > section:first-of-type .right {
