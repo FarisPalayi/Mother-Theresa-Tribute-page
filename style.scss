@@ -45,6 +45,7 @@
 *::after {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  //scroll-padding-top: 30px;
   transition:all .2s;
 }
 html,
@@ -67,7 +68,6 @@ body {
 ::selection {
   background-color: rgba(255, 255, 255, 0.15);
 }
-
 main {
   //FIRST SECTION
   > section:first-of-type {
@@ -274,7 +274,6 @@ main {
     width: 100%;
     padding: 1em;
     min-height: 100vh;
-    background-color: rgba(85, 19, 19, 0.1);
     @include flexBox(column,center,center);
 
     > h2 {
@@ -299,7 +298,8 @@ main {
 
     > section{
       position: relative;
-      //background-color: #fff;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
       min-width: 500px;
       min-height: 500px;
       width: 100%;
@@ -716,6 +716,7 @@ footer {
     width: 25%;
     height: 60px;
     @include flexBox(row, center, center);
+
 
     a {
       position: relative;

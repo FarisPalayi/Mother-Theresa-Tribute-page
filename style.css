@@ -526,7 +526,6 @@ main > section:nth-of-type(3) {
   width: 100%;
   padding: 1em;
   min-height: 100vh;
-  background-color: rgba(85, 19, 19, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,6 +552,8 @@ main > section:nth-of-type(3) > h2 {
 
 main > section:nth-of-type(3) > section {
   position: relative;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
   min-width: 500px;
   min-height: 500px;
   width: 100%;
