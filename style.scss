@@ -163,9 +163,9 @@ main {
       position: absolute;
       text-decoration: none;
       font-size: 4rem;
-      opacity: 0;
       transform-origin: center;
-      transform: translate(0%, 30%) rotate(90deg);
+      left: 50%;
+      transform: translate(-50%,0%) rotate(90deg);
       transition: all 0.2s;
 
       height: 65px;

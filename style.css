@@ -143,32 +143,32 @@
 @-webkit-keyframes down-arrow {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0%, -20%) rotate(90deg);
-            transform: translate(0%, -20%) rotate(90deg);
+    -webkit-transform: translate(-50%, -20%) rotate(90deg);
+            transform: translate(-50%, -20%) rotate(90deg);
   }
   40% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0%, 0%) rotate(90deg);
-            transform: translate(0%, 0%) rotate(90deg);
+    -webkit-transform: translate(-50%, 0%) rotate(90deg);
+            transform: translate(-50%, 0%) rotate(90deg);
   }
 }
 
 @keyframes down-arrow {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0%, -20%) rotate(90deg);
-            transform: translate(0%, -20%) rotate(90deg);
+    -webkit-transform: translate(-50%, -20%) rotate(90deg);
+            transform: translate(-50%, -20%) rotate(90deg);
   }
   40% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0%, 0%) rotate(90deg);
-            transform: translate(0%, 0%) rotate(90deg);
+    -webkit-transform: translate(-50%, 0%) rotate(90deg);
+            transform: translate(-50%, 0%) rotate(90deg);
   }
 }
 
@@ -374,11 +374,11 @@ main > section:first-of-type .scroll-arrow {
   position: absolute;
   text-decoration: none;
   font-size: 4rem;
-  opacity: 0;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-transform: translate(0%, 30%) rotate(90deg);
-          transform: translate(0%, 30%) rotate(90deg);
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(90deg);
+          transform: translate(-50%, 0%) rotate(90deg);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 65px;
