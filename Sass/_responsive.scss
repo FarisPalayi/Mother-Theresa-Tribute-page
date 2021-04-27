@@ -9,58 +9,23 @@
 // }
 //}
 
-@media screen and (max-width: 680px) {
-  main > section:first-of-type {
-    height: auto;
+
+
+
+@mixin bp($point) {
+  @if $point == veryLarge {
+    @media (max-width: 920px) { @content; }
   }
-}
-
-@media screen and (max-width: 920px) {
-  main > section:first-of-type {
-    .scroll-arrow {
-      visibility: hidden;
-    }
+  @else if $point == large {
+    @media (max-width: 820px) { @content; }
   }
-}
-
-@media screen and (max-width: 720px) {
-  main {
-    > section:first-of-type {
-      min-height: auto;
-      padding: 4rem 2em;
-
-      .right {
-        transform: translate(0%);
-
-        blockquote {
-          margin: 0;
-        }
-      }
-      .left {
-        display: none;
-      }
-    }
-
-    > aside ul {
-      width: 80%;
-    }
+  @else if $point == medium {
+    @media (max-width: 720px)  { @content; }
   }
-}
-
-@media screen and (max-width: 820px) {
-  main {
-    > section:nth-of-type(2) {
-      > div {
-        padding: 1.3rem;
-        width: 80%;
-      }
-      > aside {
-        width: 398px;
-      }
-    }
-
-    > aside ul {
-      width: 80%;
-    }
+  @else if $point == small {
+    @media (max-width: 680px)  { @content; }
+  }
+  @else if $point == verySmall {
+    @media (max-width: 400px)  { @content; }
   }
 }

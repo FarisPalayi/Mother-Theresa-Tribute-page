@@ -39,6 +39,7 @@
 @import "Sass/keyframes";
 @import "Sass/global";
 @import "Sass/helper_classes";
+@import "Sass/responsive";
 
 *,
 *::before,
@@ -46,8 +47,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   //scroll-padding-top: 30px;
-  transition:all .2s;
+  transition: all 0.2s;
 }
+
 html,
 body {
   background-color: $black;
@@ -55,18 +57,22 @@ body {
 }
 body {
   border-radius: 5px;
-  background-color: $black;
   color: $silver;
   margin: 1.5em 0;
   min-height: 200vh;
   font-size: 19.5px;
   font-family: sans-serif;
   width: 100%;
-  //overflow-x: hidden;
+
+  @include bp(verySmall){
+    font-size: 16px;
+  }
 }
+
 ::selection {
   background-color: rgba(255, 255, 255, 0.15);
 }
+
 main {
   //FIRST SECTION
   > section:first-of-type {
@@ -74,6 +80,19 @@ main {
     @include flexBox(row, center, center);
     flex-wrap: wrap;
     min-height: 100vh;
+
+    @include bp(small){
+      width: auto;
+    }
+    @include bp(medium){
+      min-height: auto;
+      padding: 4rem 2em;
+    }
+    @include bp(verySmall){
+      min-height: auto;
+      padding: 2rem 2.3rem;
+      height: auto;
+    }
 
     .right {
       position: relative;
@@ -86,12 +105,20 @@ main {
       transform: translate(-15%);
       z-index: 2;
 
+      @include bp(medium){
+        transform: translate(0%);
+      }
+      @include bp(verySmall){
+        transform: translate(0%);
+      }
+
       h1 {
         font-size: 4.2rem; //5.25vw //4.2rem
         margin: 0;
         color: $cyan;
         color: #0aadf0;
-        font-family: Impact,'Oswald', Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-family: Impact, "Oswald", Haettenschweiler, "Arial Narrow Bold",
+          sans-serif;
         transition: all 0.15s;
 
         opacity: 0;
@@ -124,6 +151,13 @@ main {
         //transform: translate(0%, -100%);
         animation: opacity 1500ms ease-out forwards;
         animation-delay: 3500ms;
+
+        @include bp(medium){
+          margin: 0;
+        }
+        @include bp(verySmall){
+          margin: 0;
+        }
       }
     }
 
@@ -131,6 +165,10 @@ main {
       width: 45%;
       min-width: 320px;
       margin: 0;
+
+      @include bp(medium){
+        display: none;
+      }
 
       img {
         display: block;
@@ -160,19 +198,23 @@ main {
     }
 
     .scroll-arrow {
+      //caution : there is an html inline style opacity :0;
       position: absolute;
       text-decoration: none;
       font-size: 4rem;
       transform-origin: center;
       left: 50%;
-      transform: translate(-50%,20%) rotate(90deg);
+      transform: translate(-50%, 20%) rotate(90deg);
       transition: all 0.2s;
 
       height: 65px;
       width: 65px;
       text-align: center;
       bottom: 20px;
-      
+      @include bp(veryLarge){
+        visibility: hidden;
+      }
+
       &:focus {
         outline: none;
       }
@@ -225,6 +267,10 @@ main {
       width: 40%;
       overflow: auto;
 
+      @include bp(large){
+        width: 398px;
+      }
+
       ul {
         list-style-type: none;
         padding: 0;
@@ -233,24 +279,22 @@ main {
           width: 100%;
           display: inline-block;
           display: flex;
-          
 
           .key {
             display: inline-block;
             width: 38.25%;
-            
           }
           .colon {
             display: inline-block;
             width: 6.25%;
             text-align: center;
           }
-          .value{
+          .value {
             display: inline-block;
             width: 53.25%;
           }
 
-          @supports(display:grid){
+          @supports (display: grid) {
             display: grid;
             grid-template-columns: 6fr 1fr 9fr;
 
@@ -278,6 +322,15 @@ main {
       min-width: 250px;
       width: 60%;
 
+      @include bp(large){
+        padding: 1.3rem;
+        width: 80%;
+      }
+      @include bp(verySmall){
+        padding: 1.3rem;
+        width: 100%;
+      }
+
       h2 {
         font-family: "Roboto", sans-serif;
       }
@@ -297,7 +350,7 @@ main {
     width: 100%;
     padding: 1em;
     min-height: 100vh;
-    @include flexBox(column,center,center);
+    @include flexBox(column, center, center);
 
     > h2 {
       width: 100%;
@@ -305,21 +358,9 @@ main {
       color: $cyan;
       margin-bottom: 60px;
       transition: all 0.3s;
-
-      // color: transparent;
-      // background: linear-gradient($cyan, $cyan);
-      // background-clip: text;
-      // -webkit-background-clip: text;
-
-      &:hover {
-        // color: transparent;
-        // background: linear-gradient($cyan, rgb(212, 212, 212));
-        // background-clip: text;
-        // -webkit-background-clip: text;
-      }
     }
 
-    > section{
+    > section {
       position: relative;
       margin-top: 2rem;
       margin-bottom: 5rem;
@@ -330,207 +371,210 @@ main {
       max-width: 1000px;
 
       // Middle line
-      &::before{
+      &::before {
         content: "";
         position: absolute;
         width: 5px;
         height: 100%;
         background-color: gray;
         left: 50%;
-        transform:translate(-50%);
+        transform: translate(-50%);
       }
 
-      .right-side,.left-side{
+      .right-side,
+      .left-side {
         position: relative;
         min-width: 150px;
         min-height: 80px;
-        width:100%;
+        width: 100%;
         height: 130px;
       }
 
-      .right-side{
+      .right-side {
         //background-color: rgba(255, 255, 0, 0.589);
         padding: 10px;
-        @include flexBox(row,center,center);
+        @include flexBox(row, center, center);
 
-        .year-container,.event-details-box{
+        .year-container,
+        .event-details-box {
           position: absolute;
           width: calc(50% - 2.5px);
           height: calc(100% - 10px);
         }
-        .year-container{
+        .year-container {
           //background-color: #0ff;
           left: 0;
           padding-right: 5%;
           padding-left: 1%;
-          @include flexBox(row,flex-end,center);
-          
-          p{
+          @include flexBox(row, flex-end, center);
+
+          p {
             margin: 0;
             text-align: right;
-            @include flexBox(row,flex-end,center);
+            @include flexBox(row, flex-end, center);
             color: #a9eb67;
-            color:$cyan;
-            font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
-            transition:all .2s ease-in-out;
+            color: $cyan;
+            font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
+            transition: all 0.2s ease-in-out;
 
-            &:hover{
+            &:hover {
               transform: scale(1.1);
             }
           }
         }
-        .event-details-box{
-            //background-color: lime;
-            right: 0;
-            padding-left: 5%;
-            padding-right: 1%;
-            @include flexBox(row,flex-start,center);
+        .event-details-box {
+          //background-color: lime;
+          right: 0;
+          padding-left: 5%;
+          padding-right: 1%;
+          @include flexBox(row, flex-start, center);
 
-            &::after{
-              content: '';
+          &::after {
+            content: "";
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            background-color: #ff6600;
+            background-color: $cyan;
+            border-radius: 50%;
+            left: -11px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          p {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            max-width: 360px;
+            text-align: left;
+            min-height: 50px;
+            height: 90px;
+            @include flexBox(row, flex-start, center);
+            color: black;
+            background-color: white;
+            //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
+            background-image: linear-gradient(white, white);
+            border-radius: 7px;
+            padding: 15px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+
+            // ARROW
+            &::before {
+              content: "";
               position: absolute;
-              height: 18px;
-              width: 18px;
-              background-color: #ff6600;
-              background-color: $cyan;
-              border-radius: 50%;
-              left: -11px;
+              height: 0px;
+              width: 0px;
+              border-top: solid 8px transparent;
+              border-bottom: solid 8px transparent;
+              border-right: solid 15px white;
+              border-left: solid 15px transparent;
+              left: -29px;
               top: 50%;
-              transform:translateY(-50%);
+              transform: translateY(-50%);
             }
-
-            p{
-              position: relative;
-              margin: 0;
-              width: 100%;
-              max-width: 360px;
-              text-align: left;
-              min-height: 50px;
-              height: 90px;
-              @include flexBox(row,flex-start,center);
-              color: black;
-              background-color:white;
+            &:hover {
+              box-shadow: 1.5px 1.5px 5px #0aadf0;
+              //background-image: linear-gradient(white,white);
               //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
-              background-image: linear-gradient(white ,white);
-              border-radius: 7px;
-              padding: 15px;
-              font-size: .9rem;
-              transition:all .2s;
-
-              // ARROW
-              &::before{
-                content: '';
-                position: absolute;
-                height: 0px;
-                width: 0px;
-                border-top: solid 8px transparent;
-                border-bottom: solid 8px transparent;
-                border-right: solid 15px white;
-                border-left: solid 15px transparent;
-                left: -29px;
-                top: 50%;
-                transform:translateY(-50%);
-              }
-              &:hover{
-                box-shadow: 1.5px 1.5px 5px #0aadf0;
-                //background-image: linear-gradient(white,white);
-                //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
-                transform: scale(1.01);
-              }
+              transform: scale(1.01);
             }
+          }
         }
       }
-      
-      .left-side{
+
+      .left-side {
         //background-color: rgba(255, 0, 255, 0.103);
         padding: 10px;
-        @include flexBox(row,center,center);
+        @include flexBox(row, center, center);
 
-        .year-container,.event-details-box{
+        .year-container,
+        .event-details-box {
           position: absolute;
           width: calc(50% - 2.5px);
           height: calc(100% - 10px);
         }
-        .year-container{
+        .year-container {
           //background-color: #0ff;
           right: 0;
           padding-left: 5%;
           padding-right: 1%;
-          @include flexBox(row,flex-start,center);
-          
-          p{
+          @include flexBox(row, flex-start, center);
+
+          p {
             margin: 0;
             text-align: left;
-            @include flexBox(row,flex-start,center);
+            @include flexBox(row, flex-start, center);
             color: #a9eb67;
             color: $cyan;
-            font-family: Comic Sans MS,'Comic Sans MS',sans-serif;
-            transition:all .2s ease-in-out;
+            font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
+            transition: all 0.2s ease-in-out;
 
-            &:hover{
+            &:hover {
               transform: scale(1.1);
             }
           }
         }
-        .event-details-box{
-            //background-color: lime;
-            left: 0;
-            padding-right: 5%;
-            padding-left: 1%;
-            @include flexBox(row,flex-end,center);
+        .event-details-box {
+          //background-color: lime;
+          left: 0;
+          padding-right: 5%;
+          padding-left: 1%;
+          @include flexBox(row, flex-end, center);
 
-            &::after{
-              content: '';
+          &::after {
+            content: "";
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            background-color: #ff6600;
+            background-color: $cyan;
+            border-radius: 50%;
+            right: -11.5px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          p {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            max-width: 360px;
+            text-align: left;
+            min-height: 50px;
+            height: 90px;
+            @include flexBox(row, flex-start, center);
+            color: black;
+            background-color: white;
+            background-image: linear-gradient(white, white);
+            //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
+            border-radius: 7px;
+            padding: 15px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease-out;
+
+            // ARROW
+            &::before {
+              content: "";
               position: absolute;
-              height: 18px;
-              width: 18px;
-              background-color: #ff6600;
-              background-color: $cyan;
-              border-radius: 50%;
-              right: -11.5px;
+              height: 0px;
+              width: 0px;
+              border-top: solid 8px transparent;
+              border-bottom: solid 8px transparent;
+              border-left: solid 15px white;
+              border-right: solid 15px transparent;
+              right: -29px;
               top: 50%;
-              transform:translateY(-50%);
+              transform: translateY(-50%);
             }
-
-            p{
-              position: relative;
-              margin: 0;
-              width: 100%;
-              max-width: 360px;
-              text-align: left;
-              min-height: 50px;
-              height: 90px;
-              @include flexBox(row,flex-start,center);
-              color: black;
-              background-color:white;
-              background-image: linear-gradient(white,white);
+            &:hover {
+              box-shadow: -1.5px 1.5px 5px #0aadf0;
               //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
-              border-radius: 7px;
-              padding: 15px;
-              font-size: .9rem;
-              transition:all .2s ease-out;
-              
-              // ARROW
-              &::before{
-                content: '';
-                position: absolute;
-                height: 0px;
-                width: 0px;
-                border-top: solid 8px transparent;
-                border-bottom: solid 8px transparent;
-                border-left: solid 15px white;
-                border-right: solid 15px transparent;
-                right: -29px;
-                top: 50%;
-                transform:translateY(-50%);
-              }
-              &:hover{
-                box-shadow: 1.5px 1.5px 5px #0aadf0;
-                //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
-                //background-image: linear-gradient(white,white);
-                transform: scale(1.01);
-              }
+              //background-image: linear-gradient(white,white);
+              transform: scale(1.01);
             }
+          }
         }
       }
     }
@@ -542,9 +586,20 @@ main {
     padding: 1.5rem;
     @include flexBox(column, center, center);
 
+    @include bp(verySmall){
+      width: 100%;
+    }
+
     ul {
       list-style-type: disc;
       padding: 0 1rem;
+
+      @include bp(medium){
+        width: 80%;
+      }
+      @include bp(large){
+        width: 80%;
+      }
 
       li {
         color: #9ee1fc;
@@ -633,14 +688,6 @@ footer {
       color: inherit;
       cursor: pointer;
       //overflow: hidden;
-
-      > span {
-        //sociall media icons' background
-        // height: $sm-icon-height;
-        // width: $sm-icon-width;
-        // background-color: #ffffff00;
-        // border-radius: 50%;
-      }
     }
     svg {
       height: $sm-icon-height;
@@ -738,7 +785,6 @@ footer {
     height: 60px;
     padding: 10px 0;
 
-
     a {
       position: relative;
       display: block;
@@ -798,5 +844,3 @@ footer {
     }
   }
 }
-@import "Sass/responsive";
-@import "Sass/mobile-only";
