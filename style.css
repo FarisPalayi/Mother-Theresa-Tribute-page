@@ -21,22 +21,6 @@
 }
 
 /*rgb(42, 154, 132)*/
-html {
-  font-size: 16px;
-}
-
-@media screen and (min-width: 320px) {
-  html {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  html {
-    font-size: 22px;
-  }
-}
-
 @-webkit-keyframes from-top {
   0% {
     opacity: 0;
@@ -52,7 +36,6 @@ html {
             transform: translate(0%, 0%);
   }
 }
-
 @keyframes from-top {
   0% {
     opacity: 0;
@@ -229,6 +212,22 @@ ul li {
     background: linear-gradient(to bottom right, #0aadf0, #66defc) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc( 16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
   }
 }
 
