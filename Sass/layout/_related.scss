@@ -1,0 +1,49 @@
+//RELATED CONTENT
+.related-content {
+  width: 100%;
+  height: auto;
+  padding: 1.5rem;
+  @include flexBox(column, center, center);
+
+  @include bp(very-small) {
+    width: 100%;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding: 0 1rem;
+
+    @include bp(medium) {
+      width: 80%;
+    }
+    @include bp(large) {
+      width: 80%;
+    }
+
+    li {
+      color: #9ee1fc;
+      color: $cyan;
+
+      a {
+        color: $silver;
+        text-decoration: none;
+
+        &:hover {
+          color: $silver !important;
+          border-bottom: solid $cyan;
+        }
+        &:active {
+          color: $cyan;
+          border-bottom: solid $cyan;
+        }
+        &:visited {
+          color: hsl(190, 75%, 35%);
+        }
+        &:focus {
+          outline: none;
+          border-bottom: solid $cyan;
+        }
+      }
+    }
+  }
+}

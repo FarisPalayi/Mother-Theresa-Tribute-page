@@ -37,6 +37,15 @@ $max_width: 1000px;
 $min_font: 16px;
 $max_font: 22px;
 
-html {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+// html {
+//   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+// }
+
+@mixin iconsStyle($hover-color, $outline-color) {
+  outline-color: $outline-color !important;
+  &:active svg,
+  &:focus svg,
+  &:hover svg {
+    color: $hover-color;
+  }
 }

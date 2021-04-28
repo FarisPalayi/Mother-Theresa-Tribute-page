@@ -1,0 +1,39 @@
+// roboto-regular - latin
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 399;
+  src: url("./fonts/roboto-v19-latin-regular.eot"); // IE9 Compat Modes
+  src: local(""),
+    url("./fonts/roboto-v19-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    // IE5-IE8  url("./fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    // Super Modern Browsers  url("./fonts/roboto-v19-latin-regular.woff")
+    format("woff"),
+    // Modern Browsers  url("./fonts/roboto-v19-latin-regular.ttf")
+    format("truetype"),
+    // Safari, Android, iOS
+    url("./fonts/roboto-v19-latin-regular.svg#Roboto") format(
+        "svg"
+      ); // Legacy iOS
+}
+// open-sans-regular - latin
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 399;
+  src: url("./fonts/open-sans-v17-latin-regular.eot"); // IE9 Compat Modes
+  src: local(""),
+    url("./fonts/open-sans-v17-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    // IE5-IE8  url("./fonts/open-sans-v18-latin-regular.woff2")
+    format("woff2"),
+    // Super Modern Browsers  url("./fonts/open-sans-v18-latin-regular.woff")
+    format("woff"),
+    // Modern Browsers  url("./fonts/open-sans-v18-latin-regular.ttf")
+    format("truetype"),
+    // Safari, Android, iOS
+    url("./fonts/open-sans-v18-latin-regular.svg#OpenSans") format(
+        "svg"
+      ); // Legacy iOS
+}

@@ -1,0 +1,93 @@
+.details-section {
+  @include flexBox(row-reverse, center, center);
+  flex-wrap: wrap;
+  margin: 1.5em;
+  color: $silver;
+  min-height: 95vh;
+  height: auto;
+
+  > aside {
+    padding: 1em;
+    @include flexBox(column, flex-start, center);
+    min-width: 300px;
+    width: 40%;
+    overflow: auto;
+
+    @include bp(large) {
+      width: 398px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        width: 100%;
+        display: inline-block;
+        display: flex;
+
+        .key {
+          display: inline-block;
+          width: 38.25%;
+        }
+        .colon {
+          display: inline-block;
+          width: 6.25%;
+          text-align: center;
+        }
+        .value {
+          display: inline-block;
+          width: 53.25%;
+        }
+
+        @supports (display: grid) {
+          display: grid;
+          grid-template-columns: 6fr 1fr 9fr;
+
+          .key {
+            display: inline;
+            width: auto;
+          }
+          .colon {
+            display: inline;
+            width: auto;
+          }
+          .value {
+            display: inline;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  div {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    width: 60%;
+
+    @include bp(large) {
+      padding: 1.3rem;
+      width: 80%;
+    }
+    @include bp(very-small) {
+      padding: 1.3rem;
+      width: 100%;
+    }
+
+    h2 {
+      font-family: "Roboto", sans-serif;
+    }
+
+    p {
+      line-height: 1.5em;
+    }
+
+    ul {
+      color: $green;
+      color: $silver;
+    }
+  }
+}
