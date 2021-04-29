@@ -11,222 +11,216 @@
     margin-bottom: 60px;
     transition: all 0.3s;
   }
+}
 
-  > section {
-    position: relative;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    min-width: 500px;
-    min-height: 500px;
-    width: 100%;
+.life-events-timeline {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  min-width: 500px;
+  min-height: 500px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+
+  // Middle line
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
     height: 100%;
-    max-width: 1000px;
+    background-color: gray;
+    left: 50%;
+    transform: translate(-50%);
+  }
 
-    // Middle line
-    &::before {
+  .timeline-right-side,
+  .timeline-left-side {
+    position: relative;
+    min-width: 150px;
+    min-height: 80px;
+    width: 100%;
+    height: 130px;
+  }
+}
+
+.timeline-right-side {
+  //background-color: rgba(255, 255, 0, 0.589);
+  padding: 10px;
+  @include flexBox(row, center, center);
+
+  .year-container {
+    //background-color: #0ff;
+    left: 0;
+    padding-right: 5%;
+    padding-left: 1%;
+    @include flexBox(row, flex-end, center);
+
+    p {
+      margin: 0;
+      text-align: right;
+      @include flexBox(row, flex-end, center);
+      color: #a9eb67;
+      color: $cyan;
+      font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .event-details-box {
+    //background-color: lime;
+    right: 0;
+    padding-left: 5%;
+    padding-right: 1%;
+    @include flexBox(row, flex-start, center);
+
+    &::after {
       content: "";
       position: absolute;
-      width: 5px;
-      height: 100%;
-      background-color: gray;
-      left: 50%;
-      transform: translate(-50%);
+      height: 18px;
+      width: 18px;
+      background-color: $cyan;
+      border-radius: 50%;
+      left: -11px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-    .right-side,
-    .left-side {
+    p {
       position: relative;
-      min-width: 150px;
-      min-height: 80px;
+      margin: 0;
       width: 100%;
-      height: 130px;
-    }
+      max-width: 360px;
+      text-align: left;
+      min-height: 50px;
+      height: 90px;
+      @include flexBox(row, flex-start, center);
+      color: black;
+      background-color: white;
+      //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
+      background-image: linear-gradient(white, white);
+      border-radius: 7px;
+      padding: 15px;
+      font-size: 0.9rem;
+      transition: all 0.2s;
 
-    .right-side {
-      //background-color: rgba(255, 255, 0, 0.589);
-      padding: 10px;
-      @include flexBox(row, center, center);
-
-      .year-container,
-      .event-details-box {
+      // ARROW
+      &::before {
+        content: "";
         position: absolute;
-        width: calc(50% - 2.5px);
-        height: calc(100% - 10px);
+        height: 0px;
+        width: 0px;
+        border-top: solid 8px transparent;
+        border-bottom: solid 8px transparent;
+        border-right: solid 15px white;
+        border-left: solid 15px transparent;
+        left: -29px;
+        top: 50%;
+        transform: translateY(-50%);
       }
-      .year-container {
-        //background-color: #0ff;
-        left: 0;
-        padding-right: 5%;
-        padding-left: 1%;
-        @include flexBox(row, flex-end, center);
-
-        p {
-          margin: 0;
-          text-align: right;
-          @include flexBox(row, flex-end, center);
-          color: #a9eb67;
-          color: $cyan;
-          font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
-          transition: all 0.2s ease-in-out;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-      }
-      .event-details-box {
-        //background-color: lime;
-        right: 0;
-        padding-left: 5%;
-        padding-right: 1%;
-        @include flexBox(row, flex-start, center);
-
-        &::after {
-          content: "";
-          position: absolute;
-          height: 18px;
-          width: 18px;
-          background-color: #ff6600;
-          background-color: $cyan;
-          border-radius: 50%;
-          left: -11px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        p {
-          position: relative;
-          margin: 0;
-          width: 100%;
-          max-width: 360px;
-          text-align: left;
-          min-height: 50px;
-          height: 90px;
-          @include flexBox(row, flex-start, center);
-          color: black;
-          background-color: white;
-          //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
-          background-image: linear-gradient(white, white);
-          border-radius: 7px;
-          padding: 15px;
-          font-size: 0.9rem;
-          transition: all 0.2s;
-
-          // ARROW
-          &::before {
-            content: "";
-            position: absolute;
-            height: 0px;
-            width: 0px;
-            border-top: solid 8px transparent;
-            border-bottom: solid 8px transparent;
-            border-right: solid 15px white;
-            border-left: solid 15px transparent;
-            left: -29px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-          &:hover {
-            box-shadow: 1.5px 1.5px 5px #0aadf0;
-            //background-image: linear-gradient(white,white);
-            //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
-            transform: scale(1.01);
-          }
-        }
+      &:hover {
+        box-shadow: 1.5px 1.5px 5px #0aadf0;
+        //background-image: linear-gradient(white,white);
+        //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
+        transform: scale(1.01);
       }
     }
+  }
+}
 
-    .left-side {
-      //background-color: rgba(255, 0, 255, 0.103);
-      padding: 10px;
-      @include flexBox(row, center, center);
+.year-container,
+.event-details-box {
+  position: absolute;
+  width: calc(50% - 2.5px);
+  height: calc(100% - 10px);
+}
 
-      .year-container,
-      .event-details-box {
+.timeline-left-side {
+  //background-color: rgba(255, 0, 255, 0.103);
+  padding: 10px;
+  @include flexBox(row, center, center);
+
+  .year-container {
+    //background-color: #0ff;
+    right: 0;
+    padding-left: 5%;
+    padding-right: 1%;
+    @include flexBox(row, flex-start, center);
+
+    p {
+      margin: 0;
+      text-align: left;
+      @include flexBox(row, flex-start, center);
+      color: #a9eb67;
+      color: $cyan;
+      font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .event-details-box {
+    //background-color: lime;
+    left: 0;
+    padding-right: 5%;
+    padding-left: 1%;
+    @include flexBox(row, flex-end, center);
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      background-color: #ff6600;
+      background-color: $cyan;
+      border-radius: 50%;
+      right: -11.5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    p {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      max-width: 360px;
+      text-align: left;
+      min-height: 50px;
+      height: 90px;
+      @include flexBox(row, flex-start, center);
+      color: black;
+      background-color: white;
+      background-image: linear-gradient(white, white);
+      //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
+      border-radius: 7px;
+      padding: 15px;
+      font-size: 0.9rem;
+      transition: all 0.2s ease-out;
+
+      // ARROW
+      &::before {
+        content: "";
         position: absolute;
-        width: calc(50% - 2.5px);
-        height: calc(100% - 10px);
+        height: 0px;
+        width: 0px;
+        border-top: solid 8px transparent;
+        border-bottom: solid 8px transparent;
+        border-left: solid 15px white;
+        border-right: solid 15px transparent;
+        right: -29px;
+        top: 50%;
+        transform: translateY(-50%);
       }
-      .year-container {
-        //background-color: #0ff;
-        right: 0;
-        padding-left: 5%;
-        padding-right: 1%;
-        @include flexBox(row, flex-start, center);
-
-        p {
-          margin: 0;
-          text-align: left;
-          @include flexBox(row, flex-start, center);
-          color: #a9eb67;
-          color: $cyan;
-          font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
-          transition: all 0.2s ease-in-out;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-      }
-      .event-details-box {
-        //background-color: lime;
-        left: 0;
-        padding-right: 5%;
-        padding-left: 1%;
-        @include flexBox(row, flex-end, center);
-
-        &::after {
-          content: "";
-          position: absolute;
-          height: 18px;
-          width: 18px;
-          background-color: #ff6600;
-          background-color: $cyan;
-          border-radius: 50%;
-          right: -11.5px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        p {
-          position: relative;
-          margin: 0;
-          width: 100%;
-          max-width: 360px;
-          text-align: left;
-          min-height: 50px;
-          height: 90px;
-          @include flexBox(row, flex-start, center);
-          color: black;
-          background-color: white;
-          background-image: linear-gradient(white, white);
-          //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
-          border-radius: 7px;
-          padding: 15px;
-          font-size: 0.9rem;
-          transition: all 0.2s ease-out;
-
-          // ARROW
-          &::before {
-            content: "";
-            position: absolute;
-            height: 0px;
-            width: 0px;
-            border-top: solid 8px transparent;
-            border-bottom: solid 8px transparent;
-            border-left: solid 15px white;
-            border-right: solid 15px transparent;
-            right: -29px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-          &:hover {
-            box-shadow: -1.5px 1.5px 5px #0aadf0;
-            //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
-            //background-image: linear-gradient(white,white);
-            transform: scale(1.01);
-          }
-        }
+      &:hover {
+        box-shadow: -1.5px 1.5px 5px #0aadf0;
+        //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
+        //background-image: linear-gradient(white,white);
+        transform: scale(1.01);
       }
     }
   }

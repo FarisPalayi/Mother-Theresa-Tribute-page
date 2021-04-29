@@ -1,4 +1,4 @@
-@mixin flexBox($direction, $justify, $align) {
+@mixin flexBox($direction: row, $justify: flex-start, $align: stretch) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -41,7 +41,7 @@ $max_font: 22px;
 //   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 // }
 
-@mixin iconsStyle($hover-color, $outline-color) {
+@mixin iconsStyle($hover-color: white, $outline-color: $cyan) {
   outline-color: $outline-color !important;
   &:active svg,
   &:focus svg,
