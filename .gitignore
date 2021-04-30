@@ -2,3 +2,5 @@ style.css.map
 *.map
 .log
 .sass-cache
+node_modules
+demo

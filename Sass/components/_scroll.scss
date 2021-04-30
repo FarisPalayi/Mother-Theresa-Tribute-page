@@ -1,0 +1,38 @@
+// global
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: hsla(0, 0%, 30%, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6d6d6f;
+}
+
+// specific
+.life-events-timeline {
+  $scrollbar-width: 0.8rem;
+
+  scrollbar-color: darken($cyan, 9%) lighten($black, 7%);
+  scrollbar-width: $scrollbar-width, 0.8rem;
+  transition: background-color 0.2s;
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width, 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: lighten($black, 7%);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darken($cyan, 5%);
+
+    &:hover {
+      background-color: darken($cyan, 13.5%);
+    }
+    &:active {
+      background-color: darken($cyan, 23%);
+    }
+  }
+}
