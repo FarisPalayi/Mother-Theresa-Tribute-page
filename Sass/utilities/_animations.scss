@@ -65,3 +65,46 @@
     transform: translate(-50%, 0%) rotate(90deg);
   }
 }
+
+@keyframes faris {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(4deg);
+    //color: red;
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(20deg);
+    //color: blue;
+  }
+  40% {
+    transform: rotate(23deg);
+    //color: $green;
+  }
+  50% {
+    transform-origin: left;
+    transform: rotate(18deg);
+  }
+  60% {
+    transform: rotate(20deg);
+    //color: magenta;
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(17deg);
+  }
+  90% {
+    transform: rotate(10deg);
+    //color: $cyan;
+  }
+  100% {
+    transform: rotate(0deg) translate(0);
+    //color: $cyan;
+  }
+}

@@ -152,8 +152,15 @@ div.introduction {
     font-weight: 300;
   }
   > span:nth-child(2) {
+    position: relative;
+    display: inline-block;
     font-weight: 500;
     color: $cyan;
+    transition: all 0.2s;
+
+    &:hover {
+      animation: faris 2000ms ease-in forwards;
+    }
   }
 }
 
