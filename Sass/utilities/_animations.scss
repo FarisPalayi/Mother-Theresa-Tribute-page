@@ -67,19 +67,13 @@
 }
 
 @keyframes faris {
-  10% {
-    color: red;
+  33% {
+    transform: rotate(1deg);
   }
-  30% {
-    color: blue;
-  }
-  40% {
-    color: $green;
-  }
-  60% {
-    color: magenta;
+  66% {
+    transform: rotate(-1deg);
   }
   100% {
-    color: $cyan;
+    transform: rotate(0deg);
   }
 }
