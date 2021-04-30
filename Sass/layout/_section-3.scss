@@ -6,8 +6,6 @@
 
   > h2 {
     width: 100%;
-    text-align: center;
-    color: $cyan;
     margin-bottom: 60px;
     transition: all 0.3s;
   }
@@ -58,11 +56,7 @@
 
     p {
       margin: 0;
-      text-align: right;
       @include flexBox(row, flex-end, center);
-      color: #a9eb67;
-      color: $cyan;
-      font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
       transition: all 0.2s ease-in-out;
 
       &:hover {
@@ -94,17 +88,14 @@
       margin: 0;
       width: 100%;
       max-width: 360px;
-      text-align: left;
       min-height: 50px;
       height: 90px;
       @include flexBox(row, flex-start, center);
-      color: black;
       background-color: white;
       //background-image: linear-gradient(45deg,white 50%,$cyan 50%);
       background-image: linear-gradient(white, white);
       border-radius: 7px;
       padding: 15px;
-      font-size: 0.9rem;
       transition: all 0.2s;
 
       // ARROW
@@ -152,11 +143,7 @@
 
     p {
       margin: 0;
-      text-align: left;
       @include flexBox(row, flex-start, center);
-      color: #a9eb67;
-      color: $cyan;
-      font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
       transition: all 0.2s ease-in-out;
 
       &:hover {
@@ -189,17 +176,14 @@
       margin: 0;
       width: 100%;
       max-width: 360px;
-      text-align: left;
       min-height: 50px;
       height: 90px;
       @include flexBox(row, flex-start, center);
-      color: black;
       background-color: white;
       background-image: linear-gradient(white, white);
       //background-image: linear-gradient(45deg,$cyan 50%,white 50%);
       border-radius: 7px;
       padding: 15px;
-      font-size: 0.9rem;
       transition: all 0.2s ease-out;
 
       // ARROW

@@ -2,7 +2,6 @@ section.details-section {
   @include flexBox(row-reverse, center, center);
   flex-wrap: wrap;
   margin: 1.5em;
-  color: $silver;
   min-height: 95vh;
   height: auto;
 }
@@ -35,7 +34,6 @@ aside.general-facts {
     .colon {
       display: inline-block;
       width: 6.25%;
-      text-align: center;
     }
     .value {
       display: inline-block;
@@ -76,18 +74,5 @@ div.introduction {
   @include bp(very-small) {
     padding: 1.3rem;
     width: 100%;
-  }
-
-  h2 {
-    font-family: "Roboto", sans-serif;
-  }
-
-  p {
-    line-height: 1.5em;
-  }
-
-  ul {
-    color: $green;
-    color: $silver;
   }
 }

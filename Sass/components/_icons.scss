@@ -49,7 +49,7 @@ footer > .social-media-icons {
 }
 
 .gmail-icon a {
-  @include iconsStyle($gmailLogoColor, tra);
+  @include iconsStyle($gmailLogoColor, transparent);
 }
 
 .github-icon a {

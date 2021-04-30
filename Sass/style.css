@@ -3,16 +3,16 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 399;
-  src: url("./fonts/roboto-v19-latin-regular.eot");
-  src: local(""), url("./fonts/roboto-v19-latin-regular.eot?#iefix") format("embedded-opentype"), format("woff"), format("truetype"), url("./fonts/roboto-v19-latin-regular.svg#Roboto") format("svg");
+  src: url("../../fonts/roboto-v19-latin-regular.eot");
+  src: local("../../"), url("../fonts/roboto-v19-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/roboto-v20-latin-regular.woff2") format("woff2"), url("../../fonts/roboto-v19-latin-regular.woff") format("woff"), url("../../fonts/roboto-v19-latin-regular.ttf") format("truetype"), url("../../fonts/roboto-v19-latin-regular.svg#Roboto") format("svg");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 399;
-  src: url("./fonts/open-sans-v17-latin-regular.eot");
-  src: local(""), url("./fonts/open-sans-v17-latin-regular.eot?#iefix") format("embedded-opentype"), format("woff2"), format("woff"), format("truetype"), url("./fonts/open-sans-v18-latin-regular.svg#OpenSans") format("svg");
+  src: url("../../fonts/open-sans-v17-latin-regular.eot");
+  src: local("../../"), url("../../fonts/open-sans-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/open-sans-v18-latin-regular.woff2") format("woff2"), url("./fonts/open-sans-v18-latin-regular.woff") format("woff"), url("./fonts/open-sans-v18-latin-regular.ttf") format("truetype"), url("../../fonts/open-sans-v18-latin-regular.svg#OpenSans") format("svg");
 }
 
 *,
@@ -28,23 +28,13 @@
 html,
 body {
   background-color: #0b0c10;
-  font-size: 100%;
 }
 
 body {
   border-radius: 5px;
-  color: #d8d8d8;
   margin: 1.5em 0;
   min-height: 200vh;
-  font-size: 19.5px;
-  font-family: sans-serif;
   width: 99%;
-}
-
-@media (max-width: 400px) {
-  body {
-    font-size: 15px;
-  }
 }
 
 ::-moz-selection {
@@ -53,6 +43,175 @@ body {
 
 ::selection {
   background-color: rgba(255, 255, 255, 0.15);
+}
+
+html,
+body {
+  font-size: 100%;
+}
+
+body {
+  font-size: 19.5px;
+  font-family: sans-serif;
+  color: #d8d8d8;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", "Roboto", sans-serif;
+  text-align: center;
+  color: #0aadf0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.first-section .right h1 {
+  font-size: 4.2rem;
+  font-family: Impact, "Oswald", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #0aadf0;
+}
+
+.first-section .right .subtitle {
+  font-size: 1.4375rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  color: #f8b819;
+}
+
+.first-section .right blockquote {
+  font-size: 1.6rem;
+  font-family: serif;
+  font-style: italic;
+  text-align: center;
+  color: #a9eb67;
+}
+
+.first-section .left img {
+  font-size: 0.8rem;
+  color: #9c9c9c;
+}
+
+.first-section .left .main-image-source {
+  font-size: 0.6rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.first-section .scroll-arrow {
+  font-size: 4rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+section.details-section {
+  color: #d8d8d8;
+}
+
+aside.general-facts .colon {
+  text-align: center;
+}
+
+div.introduction h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+div.introduction p {
+  line-height: 1.5em;
+}
+
+div.introduction ul {
+  color: #d8d8d8;
+}
+
+.life-events-section > h2 {
+  text-align: center;
+  color: #0aadf0;
+}
+
+.timeline-right-side .year-container p {
+  font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
+  text-align: right;
+  color: #a9eb67;
+  color: #0aadf0;
+}
+
+.timeline-right-side .event-details-box p {
+  font-size: 0.9rem;
+  text-align: left;
+  color: black;
+}
+
+.timeline-left-side .year-container p {
+  font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
+  text-align: left;
+  color: #a9eb67;
+  color: #0aadf0;
+}
+
+.timeline-left-side .event-details-box p {
+  font-size: 0.9rem;
+  text-align: left;
+  color: black;
+}
+
+.footer-text-box {
+  line-height: 60px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.footer-text-box > span:first-child {
+  font-weight: 300;
+}
+
+.footer-text-box > span:nth-child(2) {
+  font-weight: 500;
+  color: #0aadf0;
+}
+
+.top-arrow > a {
+  line-height: 47.5px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.top-arrow > a::after {
+  font-size: 0.7rem;
+  line-height: 25px;
+  white-space: nowrap;
+  color: #b1b1b1;
+}
+
+.related-content ul li {
+  color: #0aadf0;
+}
+
+.related-content ul li a {
+  color: #d8d8d8;
+}
+
+.related-content ul li a:hover {
+  color: #d8d8d8 !important;
+}
+
+.related-content ul li a:active {
+  color: #0aadf0;
+}
+
+.related-content ul li a:visited {
+  color: #16869c;
 }
 
 h1,
@@ -161,7 +320,7 @@ footer > .social-media-icons a:active {
 }
 
 .gmail-icon a {
-  outline-color: tra !important;
+  outline-color: transparent !important;
 }
 
 .gmail-icon a:active svg,
@@ -266,11 +425,7 @@ footer > .social-media-icons a:active {
 }
 
 .first-section .right h1 {
-  font-size: 4.2rem;
   margin: 0;
-  color: #0aadf0;
-  color: #0aadf0;
-  font-family: Impact, "Oswald", Haettenschweiler, "Arial Narrow Bold", sans-serif;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
   opacity: 0;
@@ -283,13 +438,8 @@ footer > .social-media-icons a:active {
 }
 
 .first-section .right .subtitle {
-  color: #4abeb9;
-  color: #f8b819;
   margin: 1.5em 0;
   padding: 16px 0;
-  text-align: center;
-  font-size: 1.4375rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   opacity: 0;
   -webkit-transform: translate(0%, -100%);
           transform: translate(0%, -100%);
@@ -300,21 +450,17 @@ footer > .social-media-icons a:active {
 }
 
 .first-section .right blockquote {
-  text-align: center;
-  font-size: 1.6rem;
-  font-style: italic;
-  color: #a9eb67;
-  font-family: serif;
   opacity: 0;
   -webkit-animation: opacity 1500ms ease-out forwards;
           animation: opacity 1500ms ease-out forwards;
   -webkit-animation-delay: 3500ms;
           animation-delay: 3500ms;
+  margin-top: 8.5px;
 }
 
 @media (max-width: 720px) {
   .first-section .right blockquote {
-    margin: 0;
+    margin: 3px 0 0 0;
   }
 }
 
@@ -343,18 +489,14 @@ footer > .social-media-icons a:active {
 
 .first-section .left img {
   display: block;
-  max-width: 100%;
-  height: auto;
   margin: 0 auto;
+  height: auto;
   max-height: 100vh;
+  max-width: 100%;
   overflow: hidden;
-  font-size: 0.8rem;
-  color: #9c9c9c;
 }
 
 .first-section .left .main-image-source {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 0.6rem;
   opacity: 0.45;
   margin-left: 0.6vw;
   opacity: 0;
@@ -365,8 +507,6 @@ footer > .social-media-icons a:active {
 
 .first-section .scroll-arrow {
   position: absolute;
-  text-decoration: none;
-  font-size: 4rem;
   -webkit-transform-origin: center;
           transform-origin: center;
   left: 50%;
@@ -376,7 +516,6 @@ footer > .social-media-icons a:active {
   transition: all 0.2s;
   height: 65px;
   width: 65px;
-  text-align: center;
   bottom: 20px;
   -webkit-animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
           animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
@@ -398,8 +537,6 @@ footer > .social-media-icons a:active {
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-transition-delay: 0.19s;
@@ -441,7 +578,6 @@ section.details-section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 1.5em;
-  color: #d8d8d8;
   min-height: 95vh;
   height: auto;
 }
@@ -493,7 +629,6 @@ aside.general-facts ul li .key {
 aside.general-facts ul li .colon {
   display: inline-block;
   width: 6.25%;
-  text-align: center;
 }
 
 aside.general-facts ul li .value {
@@ -549,19 +684,6 @@ div.introduction {
   }
 }
 
-div.introduction h2 {
-  font-family: "Roboto", sans-serif;
-}
-
-div.introduction p {
-  line-height: 1.5em;
-}
-
-div.introduction ul {
-  color: #a9eb67;
-  color: #d8d8d8;
-}
-
 .life-events-section {
   width: 100%;
   padding: 1em;
@@ -583,8 +705,6 @@ div.introduction ul {
 
 .life-events-section > h2 {
   width: 100%;
-  text-align: center;
-  color: #0aadf0;
   margin-bottom: 60px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -659,7 +779,6 @@ div.introduction ul {
 
 .timeline-right-side .year-container p {
   margin: 0;
-  text-align: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,9 +792,6 @@ div.introduction ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #a9eb67;
-  color: #0aadf0;
-  font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -722,7 +838,6 @@ div.introduction ul {
   margin: 0;
   width: 100%;
   max-width: 360px;
-  text-align: left;
   min-height: 50px;
   height: 90px;
   display: -webkit-box;
@@ -738,13 +853,11 @@ div.introduction ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
   background-color: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
   background-image: linear-gradient(white, white);
   border-radius: 7px;
   padding: 15px;
-  font-size: 0.9rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -816,7 +929,6 @@ div.introduction ul {
 
 .timeline-left-side .year-container p {
   margin: 0;
-  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,9 +942,6 @@ div.introduction ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #a9eb67;
-  color: #0aadf0;
-  font-family: Comic Sans MS, "Comic Sans MS", sans-serif;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -880,7 +989,6 @@ div.introduction ul {
   margin: 0;
   width: 100%;
   max-width: 360px;
-  text-align: left;
   min-height: 50px;
   height: 90px;
   display: -webkit-box;
@@ -896,13 +1004,11 @@ div.introduction ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
   background-color: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
   background-image: linear-gradient(white, white);
   border-radius: 7px;
   padding: 15px;
-  font-size: 0.9rem;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
@@ -971,28 +1077,12 @@ div.introduction ul {
   }
 }
 
-.related-content ul li {
-  color: #9ee1fc;
-  color: #0aadf0;
-}
-
-.related-content ul li a {
-  color: #d8d8d8;
-  text-decoration: none;
-}
-
 .related-content ul li a:hover {
-  color: #d8d8d8 !important;
   border-bottom: solid #0aadf0;
 }
 
 .related-content ul li a:active {
-  color: #0aadf0;
   border-bottom: solid #0aadf0;
-}
-
-.related-content ul li a:visited {
-  color: #16869c;
 }
 
 .related-content ul li a:focus {
@@ -1053,18 +1143,6 @@ footer::after {
   width: 50%;
   height: 60px;
   margin: 0;
-  line-height: 60px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.footer-text-box > span:first-child {
-  font-weight: 300;
-}
-
-.footer-text-box > span:nth-child(2) {
-  font-weight: 500;
-  color: #0aadf0;
 }
 
 .top-arrow {
@@ -1080,14 +1158,9 @@ footer::after {
   margin: auto;
   width: 40px;
   height: 40px;
-  text-align: center;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 10px 5px #3f3f3f;
           box-shadow: 0px 0px 10px 5px #3f3f3f;
-  text-align: center;
-  line-height: 47.5px;
-  text-decoration: none;
-  color: white;
   -webkit-transition: -webkit-transform 0.15s ease-out, -webkit-box-shadow 0.2s;
   transition: -webkit-transform 0.15s ease-out, -webkit-box-shadow 0.2s;
   transition: transform 0.15s ease-out, box-shadow 0.2s;
@@ -1116,14 +1189,10 @@ footer::after {
   position: absolute;
   height: 25px;
   width: 70px;
-  line-height: 25px;
-  color: #b1b1b1;
-  font-size: 0.7rem;
   opacity: 0.7;
   top: 100%;
   left: 100%;
   border: 1px solid #b1b1b1d2;
-  white-space: nowrap;
   border-radius: 2px;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
