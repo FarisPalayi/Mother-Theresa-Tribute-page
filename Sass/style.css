@@ -176,17 +176,8 @@ div.introduction ul {
 }
 
 .footer-text-box > span:nth-child(2) {
-  position: relative;
-  display: inline-block;
   font-weight: 500;
   color: #0aadf0;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.footer-text-box > span:nth-child(2):hover {
-  -webkit-animation: faris 700ms ease-in forwards;
-          animation: faris 700ms ease-in forwards;
 }
 
 .top-arrow > a {
@@ -1154,6 +1145,18 @@ footer::after {
   margin: 0;
 }
 
+.footer-text-box > span:nth-child(2) {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer-text-box > span:nth-child(2):hover {
+  -webkit-animation: slight-tilt 700ms ease-in forwards;
+          animation: slight-tilt 700ms ease-in forwards;
+}
+
 .top-arrow {
   min-width: 44px;
   width: 25%;
@@ -1371,7 +1374,7 @@ footer::after {
   }
 }
 
-@-webkit-keyframes faris {
+@-webkit-keyframes slight-tilt {
   33% {
     -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
@@ -1386,7 +1389,7 @@ footer::after {
   }
 }
 
-@keyframes faris {
+@keyframes slight-tilt {
   33% {
     -webkit-transform: rotate(1deg);
             transform: rotate(1deg);

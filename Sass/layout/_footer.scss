@@ -41,6 +41,16 @@ footer {
   width: 50%;
   height: 60px;
   margin: 0;
+
+  > span:nth-child(2) {
+    position: relative;
+    display: inline-block;
+    transition: all 0.2s;
+
+    &:hover {
+      animation: slight-tilt 700ms ease-in forwards;
+    }
+  }
 }
 
 .top-arrow {
