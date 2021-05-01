@@ -69,6 +69,7 @@ footer {
     box-shadow: 0px 0px 10px 5px rgb(63, 63, 63);
     transition: transform 0.15s ease-out, box-shadow 0.2s;
     outline: none;
+    border: 1px solid transparent;
 
     &:focus {
       outline: none;
@@ -76,9 +77,10 @@ footer {
     &:hover,
     &:focus {
       //background-color: rgba(214, 214, 214, 0.562);
+      outline: 2px solid transparent;
+      outline-offset: 0px;
       box-shadow: 0px 0px 15px 4px $cyan;
       transform: translateY(-5px);
-      outline: none;
       svg {
         fill: $cyan;
       }

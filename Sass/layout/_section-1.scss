@@ -113,6 +113,7 @@
   height: 65px;
   width: 65px;
   bottom: 20px;
+  outline: none;
 
   animation: down-arrow 1100ms ease-out forwards 6000ms infinite;
 
@@ -133,10 +134,11 @@
 
     transition: all 0.1s;
     transition-delay: 0.19s;
-    border: 1px solid transparent;
   }
   &:focus::before {
-    border: 1px solid gray;
+    border: 1px solid transparent;
+    outline: 1px solid gray;
+    outline-offset: 0px;
   }
 
   &:hover svg #down-path,
