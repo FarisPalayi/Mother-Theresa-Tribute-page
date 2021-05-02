@@ -580,8 +580,8 @@ footer > .social-media-icons a:active {
 }
 
 .first-section .scroll-arrow:focus::before {
-  border: 1px solid transparent;
-  outline: 1px solid gray;
+  border: 1px solid #0aadf0;
+  outline: 1px solid transparent;
   outline-offset: 0px;
 }
 

@@ -133,8 +133,8 @@
     transition-delay: 0.19s;
   }
   &:focus::before {
-    border: 1px solid transparent;
-    outline: 1px solid gray;
+    border: 1px solid $cyan;
+    outline: 1px solid transparent;
     outline-offset: 0px;
   }
 
