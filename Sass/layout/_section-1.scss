@@ -121,9 +121,6 @@
     visibility: hidden;
   }
 
-  &:focus {
-    outline: none;
-  }
   &::before {
     content: "";
     position: absolute;

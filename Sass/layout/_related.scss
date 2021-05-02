@@ -73,6 +73,14 @@
       }
 
       &:hover {
+        border-bottom: solid transparent;
+        @include bp(small) {
+          border-bottom: solid $cyan;
+        }
+      }
+      &:active,
+      &:focus {
+        border-bottom: solid transparent;
         @include bp(small) {
           border-bottom: solid $cyan;
         }

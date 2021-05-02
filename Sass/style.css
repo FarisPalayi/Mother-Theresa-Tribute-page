@@ -567,10 +567,6 @@ footer > .social-media-icons a:active {
   }
 }
 
-.first-section .scroll-arrow:focus {
-  outline: none;
-}
-
 .first-section .scroll-arrow::before {
   content: "";
   position: absolute;
@@ -1266,8 +1262,22 @@ div.introduction {
   }
 }
 
+.related-content ul li a:hover {
+  border-bottom: solid transparent;
+}
+
 @media (max-width: 680px) {
   .related-content ul li a:hover {
+    border-bottom: solid #0aadf0;
+  }
+}
+
+.related-content ul li a:active, .related-content ul li a:focus {
+  border-bottom: solid transparent;
+}
+
+@media (max-width: 680px) {
+  .related-content ul li a:active, .related-content ul li a:focus {
     border-bottom: solid #0aadf0;
   }
 }
