@@ -1,6 +1,9 @@
 // global
 ::-webkit-scrollbar {
   width: 1rem;
+  @include bp(small) {
+    width: 0.5rem;
+  }
 }
 ::-webkit-scrollbar-track {
   background-color: hsla(0, 0%, 30%, 0.05);
