@@ -1123,17 +1123,51 @@ div.introduction {
   }
 }
 
-.related-content ul li a:hover {
-  border-bottom: solid #0aadf0;
+.related-content ul li a {
+  position: relative;
+  white-space: nowrap;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.related-content ul li a:active {
-  border-bottom: solid #0aadf0;
+.related-content ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: -3px;
+  background-color: #0aadf0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.related-content ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.related-content ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .related-content ul li a:focus {
   outline: none;
-  border-bottom: solid #0aadf0;
+}
+
+.related-content ul li a:focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.related-content ul li a:active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 footer {

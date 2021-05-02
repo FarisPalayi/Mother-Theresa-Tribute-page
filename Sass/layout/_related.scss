@@ -21,15 +21,36 @@
     }
 
     li a {
-      &:hover {
-        border-bottom: solid $cyan;
+      position: relative;
+      white-space: nowrap;
+      transition: transform 0.3s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        bottom: -3px;
+        background-color: $cyan;
+
+        transform: scaleX(0);
+        transform-origin: bottom left;
       }
-      &:active {
-        border-bottom: solid $cyan;
+      &:hover::after {
+        transform: scaleX(1);
+      }
+      &:hover::after {
+        transform: scaleX(1);
       }
       &:focus {
         outline: none;
-        border-bottom: solid $cyan;
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+      &:active::after {
+        transform: scaleX(1);
       }
     }
   }
