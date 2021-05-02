@@ -4,3 +4,5 @@ style.css.map
 .sass-cache
 node_modules
 demo
+package-lock.json
+package.json
