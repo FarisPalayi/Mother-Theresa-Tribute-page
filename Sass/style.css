@@ -1184,16 +1184,10 @@ div.introduction {
 .related-content ul li a {
   position: relative;
   white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-@media (max-width: 680px) {
-  .related-content ul li a {
-    white-space: pre-wrap;
-  }
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .related-content ul li a::after {
@@ -1215,23 +1209,9 @@ div.introduction {
           transform: scaleX(1);
 }
 
-@media (max-width: 680px) {
-  .related-content ul li a:hover::after {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-}
-
 .related-content ul li a:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-}
-
-@media (max-width: 680px) {
-  .related-content ul li a:hover::after {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
 }
 
 .related-content ul li a:focus {
@@ -1241,13 +1221,6 @@ div.introduction {
 .related-content ul li a:focus::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-}
-
-@media (max-width: 680px) {
-  .related-content ul li a:focus::after {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
 }
 
 .related-content ul li a:active::after {

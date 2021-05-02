@@ -23,11 +23,7 @@
     li a {
       position: relative;
       white-space: nowrap;
-      transition: transform 0.2s;
-
-      @include bp(small) {
-        white-space: pre-wrap;
-      }
+      transition: transform 0.3s;
 
       &::after {
         content: "";
@@ -43,25 +39,14 @@
       }
       &:hover::after {
         transform: scaleX(1);
-
-        @include bp(small) {
-          transform: scaleX(0);
-        }
       }
       &:hover::after {
         transform: scaleX(1);
-        @include bp(small) {
-          transform: scaleX(0);
-        }
       }
       &:focus {
         outline: none;
         &::after {
           transform: scaleX(1);
-
-          @include bp(small) {
-            transform: scaleX(0);
-          }
         }
       }
       &:active::after {
