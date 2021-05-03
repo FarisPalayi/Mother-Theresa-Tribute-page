@@ -38,3 +38,12 @@
         "svg"
       ); // Legacy iOS
 }
+
+@font-face {
+  font-family: "Haettenschweiler";
+  font-style: normal;
+  font-weight: 399;
+  src: url("../../fonts/Haettenschweiler-Regular.ttf"); // IE9 Compat Modes
+  src: local("../../"),
+    url("../../fonts/Haettenschweiler-Regular.ttf") format("truetype");
+}
