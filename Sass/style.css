@@ -112,8 +112,40 @@ section.details-section {
   color: #d8d8d8;
 }
 
+aside.general-facts {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  aside.general-facts {
+    font-size: calc( 16px + 7 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  aside.general-facts {
+    font-size: 23px;
+  }
+}
+
 aside.general-facts .colon {
   text-align: center;
+}
+
+div.introduction {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  div.introduction {
+    font-size: calc( 16px + 7 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  div.introduction {
+    font-size: 23px;
+  }
 }
 
 div.introduction h2 {
@@ -140,10 +172,42 @@ div.introduction ul {
   color: #0aadf0;
 }
 
+.timeline-right-side .year-container p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .timeline-right-side .year-container p {
+    font-size: calc( 16px + 7 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  .timeline-right-side .year-container p {
+    font-size: 23px;
+  }
+}
+
 .timeline-right-side .event-details-box p {
   font-size: 0.9rem;
   text-align: left;
   color: black;
+}
+
+.timeline-right-side .event-details-box p {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 320px) {
+  .timeline-right-side .event-details-box p {
+    font-size: calc( 12px + 4 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  .timeline-right-side .event-details-box p {
+    font-size: 16px;
+  }
 }
 
 .timeline-left-side .year-container p {
@@ -153,10 +217,42 @@ div.introduction ul {
   color: #0aadf0;
 }
 
+.timeline-left-side .year-container p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .timeline-left-side .year-container p {
+    font-size: calc( 16px + 7 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  .timeline-left-side .year-container p {
+    font-size: 23px;
+  }
+}
+
 .timeline-left-side .event-details-box p {
   font-size: 0.9rem;
   text-align: left;
   color: black;
+}
+
+.timeline-left-side .event-details-box p {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 320px) {
+  .timeline-left-side .event-details-box p {
+    font-size: calc( 12px + 4 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  .timeline-left-side .event-details-box p {
+    font-size: 16px;
+  }
 }
 
 .footer-text-box {
@@ -190,6 +286,22 @@ div.introduction ul {
 
 .related-content ul li {
   color: #0aadf0;
+}
+
+.related-content ul li {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .related-content ul li {
+    font-size: calc( 16px + 7 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  .related-content ul li {
+    font-size: 23px;
+  }
 }
 
 .related-content ul li a {
@@ -231,6 +343,28 @@ p {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
   line-height: 1.65rem;
+}
+
+p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  p {
+    font-size: calc( 16px + 7 * ((100vw - 320px) / 1860));
+  }
+}
+
+@media screen and (min-width: 2180px) {
+  p {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 400px) {
+  p {
+    line-height: 1.2rem;
+  }
 }
 
 ul li {
