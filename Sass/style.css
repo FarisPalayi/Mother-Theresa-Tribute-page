@@ -194,6 +194,13 @@ div.introduction ul {
 
 .related-content ul li a {
   color: #d8d8d8;
+  white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  .related-content ul li a {
+    white-space: normal !important;
+  }
 }
 
 .related-content ul li a:hover {
@@ -353,6 +360,12 @@ footer > .social-media-icons a:active {
   }
 }
 
+@media (max-width: 400px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
 ::-webkit-scrollbar-track {
   background-color: rgba(77, 77, 77, 0.05);
 }
@@ -361,11 +374,25 @@ footer > .social-media-icons a:active {
   background-color: #6d6d6f;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4f4f50;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #404041;
+}
+
 .life-events-timeline {
   scrollbar-color: #088dc4 #1a1c25;
   scrollbar-width: 0.8rem, 0.8rem;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+}
+
+@media (max-width: 400px) {
+  .life-events-timeline {
+    scrollbar-width: 0;
+  }
 }
 
 .life-events-timeline::-webkit-scrollbar {
@@ -1183,7 +1210,6 @@ div.introduction {
 
 .related-content ul li a {
   position: relative;
-  white-space: nowrap;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -1202,6 +1228,12 @@ div.introduction {
           transform: scaleX(0);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
+}
+
+@media (max-width: 680px) {
+  .related-content ul li a::after {
+    content: none;
+  }
 }
 
 .related-content ul li a:hover::after {
@@ -1226,13 +1258,6 @@ div.introduction {
 .related-content ul li a:active::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-}
-
-@media (max-width: 680px) {
-  .related-content ul li a:active::after {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
 }
 
 .related-content ul li a:hover {

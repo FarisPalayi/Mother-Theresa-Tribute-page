@@ -22,7 +22,6 @@
 
     li a {
       position: relative;
-      white-space: nowrap;
       transition: transform 0.3s;
 
       &::after {
@@ -36,6 +35,10 @@
 
         transform: scaleX(0);
         transform-origin: bottom left;
+
+        @include bp(small) {
+          content: none;
+        }
       }
       &:hover::after {
         transform: scaleX(1);
@@ -51,10 +54,6 @@
       }
       &:active::after {
         transform: scaleX(1);
-
-        @include bp(small) {
-          transform: scaleX(0);
-        }
       }
 
       &:hover {

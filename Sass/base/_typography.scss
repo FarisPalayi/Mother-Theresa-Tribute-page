@@ -180,6 +180,11 @@ div.introduction {
 
   a {
     color: $silver; // text color
+    white-space: nowrap;
+
+    @include bp(small) {
+      white-space: normal !important;
+    }
 
     &:hover {
       color: $silver !important;
