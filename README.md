@@ -10,3 +10,5 @@ Tribute page project for the freeCodeCamp's Responsive Web Design certificate. <
 
 - HTML
 - Sass
+
+If you can raise an issue that would be helpful.
