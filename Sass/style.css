@@ -15,6 +15,14 @@
   src: local("../../"), url("../../fonts/open-sans-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/open-sans-v18-latin-regular.woff2") format("woff2"), url("./fonts/open-sans-v18-latin-regular.woff") format("woff"), url("./fonts/open-sans-v18-latin-regular.ttf") format("truetype"), url("../../fonts/open-sans-v18-latin-regular.svg#OpenSans") format("svg");
 }
 
+@font-face {
+  font-family: "Haettenschweiler";
+  font-style: normal;
+  font-weight: 399;
+  src: url("../../fonts/Haettenschweiler-Regular.ttf");
+  src: local("../../"), url("../../fonts/Haettenschweiler-Regular.ttf") format("truetype");
+}
+
 *,
 *::before,
 *::after {
@@ -78,18 +86,19 @@ a {
 }
 
 .first-section .right .subtitle {
-  font-size: 1.4375rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Kite One", sans-serif;
+  font-size: 1em;
   text-align: center;
   color: #f8b819;
 }
 
 .first-section .right blockquote {
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   font-family: serif;
   font-style: italic;
   text-align: center;
   color: #a9eb67;
+  font-family: "Caudex", serif;
 }
 
 .first-section .left img {

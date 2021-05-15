@@ -40,17 +40,20 @@ a {
     color: $cyan;
   }
   .subtitle {
-    font-size: 1.4375rem; //1.8vw
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    // font-size: 1.4375rem; //1.8vw
+    // font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: "Kite One", sans-serif;
+    font-size: 1em;
     text-align: center;
     color: #f8b819;
   }
   blockquote {
-    font-size: 1.6rem; //2vw
+    font-size: 1.35rem; //2vw
     font-family: serif;
     font-style: italic;
     text-align: center;
     color: #a9eb67;
+    font-family: "Caudex", serif;
   }
 }
 
