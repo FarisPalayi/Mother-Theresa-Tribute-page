@@ -12,7 +12,15 @@
   font-style: normal;
   font-weight: 399;
   src: url("../../fonts/open-sans-v17-latin-regular.eot");
-  src: local("../../"), url("../../fonts/open-sans-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/open-sans-v18-latin-regular.woff2") format("woff2"), url("./fonts/open-sans-v18-latin-regular.woff") format("woff"), url("./fonts/open-sans-v18-latin-regular.ttf") format("truetype"), url("../../fonts/open-sans-v18-latin-regular.svg#OpenSans") format("svg");
+  src: local("../../"), url("../../fonts/open-sans-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans-v18-latin-regular.woff2") format("woff2"), url("../../fonts/open-sans-v18-latin-regular.woff") format("woff"), url("../../fonts/open-sans-v18-latin-regular.ttf") format("truetype"), url("../../fonts/open-sans-v18-latin-regular.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: "Haettenschweiler";
+  font-style: normal;
+  font-weight: 399;
+  src: url("../../fonts/Haettenschweiler-Regular.ttf");
+  src: local("../../"), url("../../fonts/Haettenschweiler-Regular.ttf") format("truetype");
 }
 
 *,
