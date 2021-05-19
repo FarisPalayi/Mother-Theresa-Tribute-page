@@ -39,6 +39,13 @@ a {
     font-family: Impact, "Haettenschweiler", Haettenschweiler, "Oswald",
       "Arial Narrow Bold", sans-serif;
     color: $cyan;
+
+    @include bp(small) {
+      @include fluid-type(300px, 700px, 28px, 45px);
+    }
+    @include bp(very-small) {
+      font-size: 1.7533rem;
+    }
   }
   .subtitle {
     // font-size: 1.4375rem; //1.8vw
@@ -48,6 +55,10 @@ a {
     @include fluid-type(320px, 2180px, 17px, 25px);
     text-align: center;
     color: #f8b819;
+
+    @include bp(very-small) {
+      font-size: 0.9rem;
+    }
   }
   blockquote {
     font-size: 1.35rem; //2vw
@@ -57,6 +68,10 @@ a {
     text-align: center;
     color: #a9eb67;
     font-family: "Caudex", serif;
+
+    @include bp(very-small) {
+      font-size: 0.94rem;
+    }
   }
 }
 
