@@ -41,7 +41,9 @@ a {
     color: $cyan;
 
     @include bp(small) {
-      @include fluid-type(300px, 700px, 28px, 45px);
+      // @include fluid-type(300px, 700px, 28px, 45px);
+      font-size: 7.2989vw;
+      white-space: nowrap;
     }
     @include bp(very-small) {
       font-size: 1.7533rem;
@@ -56,6 +58,10 @@ a {
     text-align: center;
     color: #f8b819;
 
+    @include bp(small) {
+      font-size: 2.599vw;
+      margin: 0.9vw;
+    }
     @include bp(very-small) {
       font-size: 0.9rem;
     }
@@ -69,6 +75,9 @@ a {
     color: #a9eb67;
     font-family: "Caudex", serif;
 
+    @include bp(small) {
+      font-size: 3vw;
+    }
     @include bp(very-small) {
       font-size: 0.94rem;
     }
