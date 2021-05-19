@@ -1,7 +1,6 @@
 .first-section {
   position: relative;
   @include flexBox(row, center, center);
-  flex-wrap: wrap;
   min-height: 100vh;
 
   @include bp(small) {
@@ -20,20 +19,24 @@
 
 .first-section .right {
   position: relative;
-  width: 55%;
   min-width: 320px;
   display: flex;
   flex-direction: column;
   margin: 0 0 1.2em 0;
   flex-grow: 1;
+  flex-basis: 100%;
   transform: translate(-15%);
   z-index: 2;
 
+  @include bp(large) {
+    transform: translate(-10%);
+  }
   @include bp(medium) {
-    transform: translate(0%);
+    transform: translate(-10%);
   }
   @include bp(very-small) {
-    transform: translate(0%);
+    min-width: 188px;
+    margin: 0;
   }
 
   h1 {
@@ -44,6 +47,10 @@
     transform: translate(0%, -100%);
     animation: from-top 1000ms ease-out forwards;
     animation-delay: 1000ms;
+
+    @include bp(very-small) {
+      font-size: 1.75rem;
+    }
   }
   .subtitle {
     margin: 1.5em 0;
@@ -53,6 +60,14 @@
     transform: translate(0%, -100%);
     animation: from-top 1000ms ease-out forwards;
     animation-delay: 2000ms;
+
+    @include bp(large) {
+      margin: 1em 0;
+    }
+    @include bp(very-small) {
+      font-size: 0.9rem;
+      margin: 0;
+    }
   }
   blockquote {
     opacity: 0;
@@ -61,32 +76,42 @@
     animation-delay: 3500ms;
     margin-top: 8.5px;
 
+    @include bp(large) {
+      margin-bottom: -33px;
+    }
     @include bp(medium) {
       margin: 3px 0 0 0;
     }
     @include bp(very-small) {
       margin: 0;
+      font-size: 0.94rem;
     }
   }
 }
 
 .first-section .left {
-  width: 45%;
+  flex-basis: 80%;
   min-width: 320px;
   margin: 0;
-
   opacity: 0;
   animation: opacity 3000ms forwards;
   animation-delay: 5000ms;
 
+  @include bp(small) {
+    flex-basis: 100%;
+  }
   @include bp(medium) {
-    display: none;
+    // display: none;
+  }
+  @include bp(very-small) {
+    min-width: 170px;
   }
 
   img {
     display: block;
     margin: 0 auto;
     height: auto;
+    max-height: 250px;
     max-height: 100vh;
     max-width: 100%;
     overflow: hidden;

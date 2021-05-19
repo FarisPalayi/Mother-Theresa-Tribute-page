@@ -35,6 +35,7 @@ a {
 .first-section .right {
   h1 {
     font-size: 4.2rem; //5.25vw //4.2rem
+    @include fluid-type(300px, 2180px, 35px, 88px);
     font-family: Impact, "Haettenschweiler", Haettenschweiler, "Oswald",
       "Arial Narrow Bold", sans-serif;
     color: $cyan;
@@ -44,11 +45,13 @@ a {
     // font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-family: "Kite One", sans-serif;
     font-size: 1em;
+    @include fluid-type(320px, 2180px, 17px, 25px);
     text-align: center;
     color: #f8b819;
   }
   blockquote {
     font-size: 1.35rem; //2vw
+    @include fluid-type(320px, 2180px, 17px, 30px);
     font-family: serif;
     font-style: italic;
     text-align: center;

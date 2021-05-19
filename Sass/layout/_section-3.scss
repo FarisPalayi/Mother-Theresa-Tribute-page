@@ -24,6 +24,10 @@
   overflow: auto;
   user-select: none;
 
+  @include bp(small) {
+    max-height: fit-content;
+  }
+
   // Middle line
   &::before {
     content: "";
